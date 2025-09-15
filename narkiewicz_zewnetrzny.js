@@ -6,7 +6,7 @@ document.write(
     .fontsize(5) + "<br>"
 );
     document.write(
-      '<p style="color:#00FF00; font-weight:bold; font-size:30px;">' +
+      '<p style="color:#00FF00; font-weight:bold; font-size:10px;">' +
         document.lastModified +
       '</p>'
     );
