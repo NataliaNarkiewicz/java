@@ -2,38 +2,51 @@
 <head> 
     <title>Natalia Narkiewicz 3F</title> 
 
-           <script>
-        document.write('<font color="red" size="76px">Wykonała: Natalia Narkiewicz mój numer w dzieniku 19, czyli ma układ [(19) mod 4=3] układ 3</font><br>');
+    <script>
+        document.write('<font color="red" size="5">Wykonała: Natalia Narkiewicz, mój numer w dzienniku 19, czyli mam układ [(19) mod 4=3] → układ 3</font><br><br>');
     </script>
 
-              
     <script type="text/javascript"> 
-        
         function WinOpen_narkiewicz_1() { 
-            window.open("grafika1.png", "okno1", "toolbar=no,directories=no,menubar=no,height=380,width=160,top=400,left=0"); 
+            let okno = window.open("", "okno1", "toolbar=no,directories=no,menubar=no,height=400,width=220,top=200,left=200"); 
+            okno.document.write(`
+                <h3>Historyjka – część 1</h3>
+                <img src="grafika1.png"><br><br>
+                <button onclick="window.close()">zamknij okno</button>
+            `);
         } 
 
-
-        
         function WinOpen_narkiewicz_2() { 
-         
-            window.open("grafika2.png", "okno2", "toolbar=no,directories=no,menubar=no,height=380,width=160,top=300,left=300"); 
-        
+            let okno = window.open("", "okno2", "toolbar=no,directories=no,menubar=no,height=400,width=220,top=200,left=500"); 
+            okno.document.write(`
+                <h3>Historyjka – część 2</h3>
+                <img src="grafika2.png"><br><br>
+                <button onclick="window.close()">zamknij okno</button>
+            `);
         } 
-        function WinOpen_narkiewicz_3() { 
 
-            window.open("grafika3.png", "okno3", "toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=600"); 
+        function WinOpen_narkiewicz_3() { 
+            let okno = window.open("", "okno3", "toolbar=no,directories=no,menubar=no,height=400,width=220,top=200,left=800"); 
+            okno.document.write(`
+                <h3>Historyjka – część 3</h3>
+                <img src="grafika3.png"><br><br>
+                <button onclick="window.close()">zamknij okno</button>
+            `);
         } 
+
         function WinOpen_narkiewicz_4() { 
-         
-            window.open("grafika4.png", "okno4", "toolbar=no,directories=no,menubar=no,height=380,width=160,top=50,left=900"); 
+            let okno = window.open("", "okno4", "toolbar=no,directories=no,menubar=no,height=400,width=220,top=200,left=1100"); 
+            okno.document.write(`
+                <h3>Historyjka – część 4 – KONIEC!!!</h3>
+                <img src="grafika4.png"><br><br>
+                <button onclick="window.close()">zamknij okno</button>
+            `);
         } 
 
         function okno_zamknij_narkiewicz() {
             window.close();
         }
 
-       
         function pokaz_wszystkie_grafiki() {
             WinOpen_narkiewicz_1();
             WinOpen_narkiewicz_2();
@@ -45,15 +58,15 @@
 
 <body> 
     <form> 
-        <input type="button" name="Grafika1" value="Grafika1-narkiewicz" onclick="WinOpen_narkiewicz_1()"> 
-        <input type="button" name="Grafika2" value="Grafika2-narkiewicz" onclick="WinOpen_narkiewicz_2()"> 
-        <input type="button" name="Grafika3" value="Grafika3-narkiewicz" onclick="WinOpen_narkiewicz_3()"> 
-        <input type="button" name="Grafika4" value="Grafika4-narkiewicz" onclick="WinOpen_narkiewicz_4()"> 
+        <input type="button" value="Grafika1" onclick="WinOpen_narkiewicz_1()"> 
+        <input type="button" value="Grafika2" onclick="WinOpen_narkiewicz_2()"> 
+        <input type="button" value="Grafika3" onclick="WinOpen_narkiewicz_3()"> 
+        <input type="button" value="Grafika4" onclick="WinOpen_narkiewicz_4()"> 
     </form> 
 
+    <br>
 
     <button onclick="okno_zamknij_narkiewicz()">Zamknij okno</button> 
-
     <button onclick="pokaz_wszystkie_grafiki()">Naciśnij mnie!!!</button> 
 </body> 
 </html>
