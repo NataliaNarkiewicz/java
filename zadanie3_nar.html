@@ -1,22 +1,26 @@
 <html> 
-     <head> 
-            <title> Natalia Narkiewicz 3F</title> 
-          <script language="JavaScript"> 
-             function WinOpen()  
-               { 
-window.open("obraz.gif","okienko","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=200"); 
-          
+<head> 
+    <title>Natalia Narkiewicz 3F</title> 
+    <script language="JavaScript"> 
+        function WinOpen() { 
+            let okno = window.open("", "okienko", "toolbar=no,directories=no,menubar=no,height=380,width=300,top=200,left=200"); 
+            
             okno.document.write(`
-                <h3 style="color:white;">Natalia Narkiewicz</h3>
-                <img src="obraz.gif"><br><br>
-                <button onclick="window.close()">zamknij okno</button>
+                <html>
+                <head><meta charset="utf-8"><title>Okno</title></head>
+                <body style="background-color:black; color:white; text-align:center;">
+                    <h3>Natalia Narkiewicz</h3>
+                    <img src="obraz.gif"><br><br>
+                    <button onclick="window.close()">zamknij okno</button>
+                </body>
+                </html>
             `);
-               } 
-          </script> 
-      </head> 
+        } 
+    </script> 
+</head> 
 <body> 
-   <form> 
-  <input type="button" name="zadanie3" value="zadanie3-narkiewicz" onclick="WinOpen(' ')"> 
+    <form> 
+        <input type="button" value="zadanie3-narkiewicz" onclick="WinOpen()"> 
     </form> 
 </body> 
-</html> 
+</html>
