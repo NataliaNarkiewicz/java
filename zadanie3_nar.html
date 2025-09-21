@@ -5,6 +5,12 @@
              function WinOpen()  
                { 
 window.open("obraz.gif","okienko","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=200"); 
+          
+            okno.document.write(`
+                <h3>Natalia Narkiewicz</h3>
+                <img src="obraz.gif"><br><br>
+                <button onclick="window.close()">zamknij okno</button>
+            `);
                } 
           </script> 
       </head> 
