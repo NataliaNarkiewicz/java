@@ -4,20 +4,26 @@
 
     <script type="text/javascript"> 
         function WinOpen_narkiewicz_1() { 
-            window.open("grafika1.png", "okno1", "toolbar=no,directories=no,menubar=no,height=380,width=160,top=100,left=100"); 
+            window.open("grafika1.png", "okno1", "toolbar=no,directories=no,menubar=no,height=380,width=160,top=250,left=700"); 
         } 
         function WinOpen_narkiewicz_2() { 
-            window.open("grafika2.png", "okno2", "toolbar=no,directories=no,menubar=no,height=380,width=160,top=150,left=300"); 
+            window.open("grafika2.png", "okno2",  "toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=500"); 
         } 
         function WinOpen_narkiewicz_3() { 
-            window.open("grafika3.png", "okno3", "toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=500"); 
+            window.open("grafika3.png", "okno3", "toolbar=no,directories=no,menubar=no,height=380,width=160,top=150,left=300"); 
         } 
         function WinOpen_narkiewicz_4() { 
-            window.open("grafika4.png", "okno4", "toolbar=no,directories=no,menubar=no,height=380,width=160,top=250,left=700"); 
+            window.open("grafika4.png", "okno4", "toolbar=no,directories=no,menubar=no,height=380,width=160,top=100,left=100"); 
         } 
 
         function okno_zamknij_narkiewicz() {
             window.close();
+        }
+          function pokaz_wszystkie_grafiki() {
+            WinOpen_narkiewicz_1();
+            WinOpen_narkiewicz_2();
+            WinOpen_narkiewicz_3();
+            WinOpen_narkiewicz_4();
         }
     </script> 
 </head> 
@@ -30,6 +36,8 @@
         <input type="button" name="Grafika4" value="Grafika4-narkiewicz" onclick="WinOpen_narkiewicz_4()"> 
     </form> 
 
+    <button onclick="pokaz_wszystkie_grafiki()">Naciśnij mnie</button> 
     <button onclick="okno_zamknij_narkiewicz()">Zamknij okno</button> 
+    
 </body> 
 </html>
