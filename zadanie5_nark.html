@@ -4,22 +4,28 @@
 
     <script type="text/javascript"> 
         function WinOpen_narkiewicz_1() { 
-            window.open("grafika1.png", "okno1", "toolbar=no,directories=no,menubar=no,height=380,width=160,top=250,left=700"); 
+            // Najniżej, w lewym dolnym rogu
+            window.open("grafika1.png", "okno1", "toolbar=no,directories=no,menubar=no,height=380,width=160,top=500,left=0"); 
         } 
         function WinOpen_narkiewicz_2() { 
-            window.open("grafika2.png", "okno2",  "toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=500"); 
+            // Trochę wyżej i bardziej w prawo
+            window.open("grafika2.png", "okno2", "toolbar=no,directories=no,menubar=no,height=380,width=160,top=350,left=300"); 
         } 
         function WinOpen_narkiewicz_3() { 
-            window.open("grafika3.png", "okno3", "toolbar=no,directories=no,menubar=no,height=380,width=160,top=150,left=300"); 
+            // Jeszcze wyżej i jeszcze bardziej w prawo
+            window.open("grafika3.png", "okno3", "toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=600"); 
         } 
         function WinOpen_narkiewicz_4() { 
-            window.open("grafika4.png", "okno4", "toolbar=no,directories=no,menubar=no,height=380,width=160,top=100,left=100"); 
+            // Najwyżej i najbardziej w prawo (prawy górny róg)
+            window.open("grafika4.png", "okno4", "toolbar=no,directories=no,menubar=no,height=380,width=160,top=50,left=900"); 
         } 
 
         function okno_zamknij_narkiewicz() {
             window.close();
         }
-          function pokaz_wszystkie_grafiki() {
+
+        // Funkcja otwierająca wszystkie grafiki po przekątnej
+        function pokaz_wszystkie_grafiki() {
             WinOpen_narkiewicz_1();
             WinOpen_narkiewicz_2();
             WinOpen_narkiewicz_3();
@@ -36,8 +42,10 @@
         <input type="button" name="Grafika4" value="Grafika4-narkiewicz" onclick="WinOpen_narkiewicz_4()"> 
     </form> 
 
-    <button onclick="pokaz_wszystkie_grafiki()">Naciśnij mnie</button> 
+    <!-- Przycisk zamykający -->
     <button onclick="okno_zamknij_narkiewicz()">Zamknij okno</button> 
-    
+
+    <!-- Przycisk otwierający wszystkie grafiki po przekątnej -->
+    <button onclick="pokaz_wszystkie_grafiki()">Naciśnij mnie</button> 
 </body> 
 </html>
