@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script>
-        document.write('<font color="black">Zastosowanie: document.getElementById("Zastosowanie:").style.fontWeight = "bold";
- Jest używany do przekazywania informacji użytkownikowi. Użytkownik musi nacisnąć ok, aby <br> potwierdził jej przeczytanie.</font><br><br>');
-    </script>
+    <style>
+        body {
+            background-color: black; 
+            color: grey; 
+        }
+        .custom-button {
+            background-color: darkgray; 
+            color: black; 
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+      
+    </style>
+    
     <script type="text/javascript">
         function show_alert() {
             alert("Uwaga!");
         }
     </script>
-    <script type="text/javascript">
-        function changeBackgroundColor() {
-            document.body.style.backgroundColor = "lightblue";
-        }
-    </script>
 </head>
 <body>
-    <input type="button" onclick="show_alert()" value="Pokaż Alert Box" />
-    <input type="button" onclick="changeBackgroundColor()" value="Zmień kolor tła" />
+    <p><b>Zastosowanie:</b> Jest używany do przekazywania informacji użytkownikowi. Użytkownik musi nacisnąć OK, aby potwierdzić jej przeczytanie.</p>
+    <input type="button" class="custom-button" onclick="show_alert()" value="Pokaż Alert Box" />
 </body>
 </html>
