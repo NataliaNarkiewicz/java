@@ -3,19 +3,16 @@
 <head>
     <style>
         body {
-            background-color: black; 
-            color: grey; 
+            background-color: grey; 
+            color: black;
         }
-        .custom-button {
+        #alertButton {
             background-color: darkgray; 
-            color: black; 
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
+            color: black;    
         }
-      
+
+        
     </style>
-    
     <script type="text/javascript">
         function show_alert() {
             alert("Uwaga!");
@@ -24,6 +21,6 @@
 </head>
 <body>
     <p><b>Zastosowanie:</b> Jest używany do przekazywania informacji użytkownikowi. Użytkownik musi nacisnąć OK, aby potwierdzić jej przeczytanie.</p>
-    <input type="button" class="custom-button" onclick="show_alert()" value="Pokaż Alert Box" />
+    <input id="alertButton" type="button" onclick="show_alert()" value="Pokaż Alert Box" />
 </body>
 </html>
