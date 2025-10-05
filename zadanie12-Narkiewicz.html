@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Narkiewicz - Zadanie 12</title>
+</head>
+<body>
+<div style="color:green; font-size:50px;">
+<script language="JavaScript">
+    // Zadanie 12 – Ile sekund (Narkiewicz)
+
+    var D1_nar = parseInt(prompt("Podaj pierwszy dzień stycznia (D1_nar):", ""));
+    var G1_nar = parseInt(prompt("Podaj godzinę w tym dniu (G1_nar):", ""));
+    var D2_nar = parseInt(prompt("Podaj drugi dzień stycznia (D2_nar):", ""));
+    var G2_nar = parseInt(prompt("Podaj godzinę w tym dniu (G2_nar):", ""));
+    
+    // Obliczenia
+    var sekundy_na_dobe = 24 * 3600;
+    var sekundy_D1 = (D1_nar - 1) * sekundy_na_dobe + G1_nar * 3600;
+    var sekundy_D2 = (D2_nar - 1) * sekundy_na_dobe + G2_nar * 3600;
+    var roznica = sekundy_D1 - sekundy_D2;
+
+    document.write("Między dniem " + D1_nar + " godz. " + G1_nar + 
+                   " a dniem " + D2_nar + " godz. " + G2_nar + "<br>");
+    document.write("Upłynęło " + roznica + " sekund.");
+</script>
+</div>
+</body>
+</html>
