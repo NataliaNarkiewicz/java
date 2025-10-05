@@ -1,19 +1,23 @@
-
 <!DOCTYPE html>
-<head>    
-<title> proste obliczenia</title>    
-<meta charset="utf-8">   
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Nar - Zadanie 11</title>
 </head>
 <body>
-<div style="color:green;font-size:50px;">
-<script language-"JavaScript">
-var m bil=prompt("m=","");
-var b bil;
-var c bil;
-var a bil=parseFloat(m bil);
-b bil=a bil+l;
-c bil=a bil*(a bil+l);
-document.write("1/"+a _bil+"=1/"+b_bil+" + 1/"+c_bil+"<br>");
+<div style="color:green; font-size:55px;"> 
+<script type="text/javascript">
+var D1_nar = prompt("Podaj pierwszy dzień stycznia (D1):", "");
+var D2_nar = prompt("Podaj drugi dzień stycznia (D2):", "");
+
+D1_nar = parseFloat(D1_nar);
+D2_nar = parseFloat(D2_nar);
+
+var roznica_nar = D1_nar - D2_nar;
+var sekundy_nar = roznica_nar * 24 * 60 * 60;
+
+document.write("Między dniem " + D2_nar + " a " + D1_nar + " stycznia<br>");
+document.write("minęło " + sekundy_nar + " sekund<br>");
 </script>
 </div>
 </body>
