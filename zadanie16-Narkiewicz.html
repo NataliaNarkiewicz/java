@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Narkiewicz - Zadanie 16</title>
+</head>
+<body>
+<div style="color:navy; font-size:30px;">
+<script language="JavaScript">
+var A_nar = parseInt(prompt("Podaj pierwszą liczbę (A):", ""));
+var B_nar = parseInt(prompt("Podaj drugą liczbę (B):", ""));
+var wynik = Math.pow(A_nar + B_nar, 3);
+var cz1 = Math.pow(A_nar, 3);
+var cz2 = 3 * Math.pow(A_nar, 2) * B_nar;
+var cz3 = 3 * A_nar * Math.pow(B_nar, 2);
+var cz4 = Math.pow(B_nar, 3);
+document.write("Wczytane liczby: A=" + A_nar + " , B=" + B_nar + "<br><br>");
+//(A + B)&sup3
+document.write("<div style='width:100%; font-size:40px;'>(" + A_nar + " + " + B_nar + ")³ = " + A_nar + "³ + 3*(" + A_nar + ")²*" + B_nar + " + 3*" + A_nar + "*(" + B_nar + ")² + " + B_nar + "³ = " + cz1 + " + " + cz2 + " + " + cz3 + " + " + cz4 + " = " + wynik + "</div>");
+</script>
+</div>
+</body>
+</html>
