@@ -1,0 +1,47 @@
+  <html>
+  <head>
+    <META charset="UTF-8"> 
+  </head>
+  <body>
+      <h3><b>KOD HTML</b></h3>
+      <textarea id="textarea" name="textarea" rows="20" cols="80">
+
+        <!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Narkiewicz - Zadanie 14</title>
+</head>
+<body>
+<div style="color:green; font-size:28px;">
+<script language="JavaScript">
+    
+    
+    var m_nar = parseInt(prompt("Podaj wartość m_nar (liczba naturalna większa od 0):", ""));
+
+    var ulamek1 = 1 / (m_nar + 1);
+    var ulamek2 = 1 / (m_nar * (m_nar + 1));
+
+    
+    var a = m_nar * (m_nar + 1);
+    var ulamek2a = 1 / (a + 1);
+    var ulamek2b = 1 / (a * (a + 1));
+
+    
+    document.write("<h2>Rozkład ułamka egipskiego na trzy ułamki</h2>");
+    document.write("Dla m = " + m_nar + "<br>");
+    document.write("Mamy:<br>");
+    document.write("1/" + m_nar + " = 1/" + (m_nar + 1) + " + 1/" + (a + 1) + " + 1/" + (a * (a + 1)) + "<br><br>");
+
+    
+    var suma = (1 / (m_nar + 1)) + (1 / (a + 1)) + (1 / (a * (a + 1)));
+    document.write("Wartości dziesiętne:<br>");
+    document.write("1/" + m_nar + " = " + (1 / m_nar).toFixed(5) + "<br>");
+    document.write("1/" + (m_nar + 1) + " = " + (1 / (m_nar + 1)).toFixed(5) + "<br>");
+    document.write("1/" + (a + 1) + " = " + ulamek2a.toFixed(5) + "<br>");
+    document.write("1/" + (a * (a + 1)) + " = " + ulamek2b.toFixed(5) + "<br>");
+    document.write("<br>Sprawdzenie: " + suma.toFixed(5) + " ≈ " + (1 / m_nar).toFixed(5));
+</script>
+</div>
+ </body>
+</html>
