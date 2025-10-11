@@ -1,33 +1,38 @@
+  <html>
+  <head>
+    <META charset="UTF-8"> 
+  </head>
+  <body>
+      <h3><b>KOD HTML</b></h3>
+      <textarea id="textarea" name="textarea" rows="20" cols="80">
+
+          
 <!DOCTYPE html>
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<title>Narkiewicz - Zadanie 12 KOD</title>
+<title>Narkiewicz - Zadanie 12</title>
 </head>
-<body style="background-color:#f0f0f0; font-family:monospace; white-space:pre;">
-&lt;!DOCTYPE html&gt;
-&lt;html lang="pl"&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8"&gt;
-&lt;title&gt;Narkiewicz - Zadanie 12&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div style="color:green; font-size:50px;"&gt;
-&lt;script language="JavaScript"&gt;
+<body>
+<div style="color:green; font-size:50px;">
+<script language="JavaScript">
+    // Zadanie 12 – Ile sekund (Narkiewicz)
+
     var D1_nar = parseInt(prompt("Podaj pierwszy dzień stycznia (D1_nar):", ""));
     var G1_nar = parseInt(prompt("Podaj godzinę w tym dniu (G1_nar):", ""));
     var D2_nar = parseInt(prompt("Podaj drugi dzień stycznia (D2_nar):", ""));
     var G2_nar = parseInt(prompt("Podaj godzinę w tym dniu (G2_nar):", ""));
     
+    // Obliczenia
     var sekundy_na_dobe = 24 * 3600;
     var sekundy_D1 = (D1_nar - 1) * sekundy_na_dobe + G1_nar * 3600;
     var sekundy_D2 = (D2_nar - 1) * sekundy_na_dobe + G2_nar * 3600;
     var roznica = sekundy_D1 - sekundy_D2;
 
     document.write("Między dniem " + D1_nar + " godz. " + G1_nar + 
-                   " a dniem " + D2_nar + " godz. " + G2_nar + "&lt;br&gt;");
+                   " a dniem " + D2_nar + " godz. " + G2_nar + "<br>");
     document.write("Upłynęło " + roznica + " sekund.");
-&lt;/script&gt;
-&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+</script>
+</div>
+</body>
+</html>
