@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Narkiewicz - Zadanie 13</title>
+</head>
+<body>
+<div style="color:green; font-size:28px;">
+<script language="JavaScript">
+  
+
+    
+    var m_nar = parseInt(prompt("Podaj wartość m_nar (liczba naturalna większa od 0):", ""));
+
+    
+    // 1/m = 1/(m+1) + 1/[m*(m+1)]
+    var ulamek1 = 1 / (m_nar + 1);
+    var ulamek2 = 1 / (m_nar * (m_nar + 1));
+
+    
+    document.write("<h2>Rozkład ułamka egipskiego</h2>");
+    document.write("Dla m = " + m_nar + "<br>");
+    document.write("Mamy: 1/" + m_nar + " = 1/" + (m_nar + 1) + " + 1/" + (m_nar * (m_nar + 1)) + "<br><br>");
+    document.write("Wartości dziesiętne:<br>");
+    document.write("1/" + m_nar + " = " + (1 / m_nar).toFixed(5) + "<br>");
+    document.write("1/" + (m_nar + 1) + " = " + ulamek1.toFixed(5) + "<br>");
+    document.write("1/" + (m_nar * (m_nar + 1)) + " = " + ulamek2.toFixed(5) + "<br>");
+    document.write("<br>Sprawdzenie: " + (ulamek1 + ulamek2).toFixed(5) + " ≈ " + (1 / m_nar).toFixed(5));
+</script>
+</div>
+</body>
+</html>
+
