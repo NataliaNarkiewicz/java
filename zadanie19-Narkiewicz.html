@@ -1,26 +1,46 @@
-<html> 
- <head> 
-  <meta charset="UTF-8"> 
-  <link rel="stylesheet" href="styl.css"> 
- </head> 
-<body> 
- <script type="text/javascript"> 
-  function pole_Narkiewicz() 
-   { 
- var a= parseFloat(document.getElementById('dlugosc').value); 
- var b= a*a; 
-        document.getElementById("nazwa").innerHTML ="Pole kwadratu= "+b.toFixed(2)+" cm^2";  
-   } 
-  function obwod_Narkiewicz() 
-   { 
- var a= parseFloat(document.getElementById('dlugosc').value); 
- var b= 4*a; 
-        document.getElementById("nazwa").innerHTML ="Obwód kwadratu= "+b.toFixed(2)+" cm";  
-   } 
- </script> 
-  <h1>Wszystko o KWADRACIE</h1><br><br> 
-  Podaj długość boku: <input type="text" id="dlugosc" value="podaj długość"> cm<br><br><br> 
-  <input type="button" name="pole_Narkiewicz" value="Oblicz pole" Onclick="pole()"><br><br> 
-  <input type="button" name="obwod_Narkiewicz" value="Oblicz obwod" Onclick="obwod()"><br><br> 
-  <div  style="color:red;font-size:50px;"id="nazwa"></div> 
-</body> 
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        input[type="text"] { width: 150px; }
+    </style>
+    <script type="text/javascript">
+       
+        function pole_Narkiewicz() {
+            var a = parseFloat(document.getElementById('dlugosc').value);
+            if (isNaN(a) || a <= 0) {
+                document.getElementById("nazwa").innerHTML = "Podaj poprawną liczbę większą od 0";
+                return;
+            }
+            var b = a * a;
+            document.getElementById("nazwa").innerHTML = "Pole kwadratu = " + b.toFixed(2) + " cm²";
+        }
+
+    
+        function obwod_Narkiewicz() {
+            var a = parseFloat(document.getElementById('dlugosc').value);
+            if (isNaN(a) || a <= 0) {
+                document.getElementById("nazwa").innerHTML = "Podaj poprawną liczbę większą od 0";
+                return;
+            }
+            var b = 4 * a;
+            document.getElementById("nazwa").innerHTML = "Obwód kwadratu = " + b.toFixed(2) + " cm";
+        }
+    </script>
+</head>
+<body>
+
+
+    Podaj długość boku: <input type="text" id="dlugosc" value=""> cm
+    <br><br><br>
+    <input type="button" value="Oblicz pole" onclick="pole_Narkiewicz()">
+    <br><br>
+    <input type="button" value="Oblicz obwód" onclick="obwod_Narkiewicz()">
+    <br><br>
+    <div id="nazwa" style="color:red; font-size:30px;"></div>
+</body>
+</html>
