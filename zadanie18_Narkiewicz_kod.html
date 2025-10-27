@@ -1,0 +1,51 @@
+  <html>
+  <head>
+    <META charset="UTF-8"> 
+  </head>
+  <body>
+      <h3><b>KOD HTML</b></h3>
+      <textarea id="textarea" name="textarea" rows="20" cols="80">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Użycie funkcji (zadanie18-Narkiewicz)</title>
+</head>
+<body>
+  <div style="color:navy; font-size:30px;">
+    <script>
+      var a = parseFloat(prompt("Podaj a:", ""));
+      var b = parseFloat(prompt("Podaj b:", ""));
+
+      function suma_nar(a, b) {
+        return a + b;
+      }
+
+      function odejmowanie_nar(a, b) {
+        return a - b;
+      }
+ 
+ 
+      function mnozenie_nar(a, b) {
+        return a * b;
+      }
+ 
+      function od_kwadratu_nar(a, b) {
+        return "a^2 = " + (a * a) + ", b^2 = " + (b * b);
+      }
+ 
+      function reszta_z_dzielenia_a_nar_przez_b_nar(a, b) {
+        return a % b;
+      }
+
+      // Wyniki
+      document.write("a = " + a + ", b = " + b + "<br><br>");
+      document.write("Suma = " + suma_nar(a, b) + "<br>");
+      document.write("Odejmowanie = " + odejmowanie_nar(a, b) + "<br>");
+      document.write("Mnożenie = " + mnozenie_nar(a, b) + "<br>");
+      document.write("Kwadraty liczb: " + od_kwadratu_nar(a, b) + "<br>");
+      document.write("Reszta z dzielenia a przez b = " + reszta_z_dzielenia_a_nar_przez_b_nar(a, b) + "<br>");
+    </script>
+  </div>
+</body>
+</html>
