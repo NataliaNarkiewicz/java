@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 20 – obliczanie długości boków trójkąta</title>
+</head>
+<body>
+
+ 
+<form>
+    <h3>Punkt A</h3>
+    a: <input type="number" id="a_dana_nar"><br>
+   
+ 
+    <h3>Punkt B</h3>
+    b: <input type="number" id="b_dana_nar"><br>
+ 
+ 
+    <button type="button" onclick="oblicz()">Oblicz pole i obwód prostokąta</button>
+</form>
+ 
+<h3>Wyniki:</h3>
+<div id="wynik"></div>
+ 
+<script>
+
+ 
+function Pole_narkiewicz(a_dana_nar, b_dana_nar) {
+    return Math.sqrt(Math.pow(a_dana_nar * a_dana_nar, 2));
+}
+ 
+function obwod_narkiewicz(a_dana_nar, b_dana_nar) {
+    return Math.sqrt(Math.pow(a_dana_nar, b_dana_nar, 2) + Math.pow(a_dana_nar, b_dana_nar, 2));
+}
+ 
+
+
+ 
+function oblicz() {
+ 
+    var a_dana_nar = parseFloat(document.getElementById("a_dana_nar").value);
+    var  b_dana_nar= parseFloat(document.getElementById("b_dana_nar").value);
+ 
+
+ 
+   /*var a_dana_nark = AB_nark(xa, ya, xb, yb);
+   /*var bc = BC_nark(xb, yb, xc, yc);
+   
+ 
+    document.getElementById("wynik").innerHTML =
+        "AB = " + ab.toFixed(4) + "<br>" +
+        "BC = " + bc.toFixed(4) + "<br>" +
+        "AC = " + ac.toFixed(4);
+}
+ 
+</script>
+ 
+</body>
+</html>
