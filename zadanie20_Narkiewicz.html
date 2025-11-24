@@ -1,90 +1,69 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>Nar - Zadanie 20</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #eef;
-      text-align: center;
-      margin-top: 30px;
-    }
-    input {
-      width: 80px;
-      margin: 5px;
-      padding: 5px;
-      text-align: center;
-    }
-    button {
-      padding: 10px 15px;
-      margin: 10px;
-      border: none;
-      background-color: #0077cc;
-      color: white;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #005fa3;
-    }
-    .wyniki {
-      margin-top: 20px;
-      font-size: 18px;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Zadanie 20 – obliczanie długości boków trójkąta</title>
 </head>
 <body>
- 
-  <h2>Nar - Zadanie 20</h2>
-  <p>Podaj współrzędne punktów A, B i C:</p>
-
-  <button onclick="AB_nar()">Oblicz AB</button>
-  <button onclick="BC_nar()">Oblicz BC</button>
-  <button onclick="AC_nar()">Oblicz AC</button>
-    <script>
-     
-      var xa_nar = parseFloat(prompt("Podaj xa:", ""));
-      var ya_nar = parseFloat(prompt("Podaj ya:", ""));
-      var xb_nar = parseFloat(prompt("Podaj xb:", ""));
-      var yb_nar = parseFloat(prompt("Podaj yb:", ""));
-      var xc_nar = parseFloat(prompt("Podaj xc:", ""));
-      var yc_nar = parseFloat(prompt("Podaj yc:", ""));
-  <div class="wyniki" id="wyniki"></div>
- 
 
  
-  <script>
-    function AB_nar() {
-      var xa_nar = parseFloat(document.getElementById("xa_nar").value);
-      var ya_nar = parseFloat(document.getElementById("ya_nar").value);
-      var xb_nar = parseFloat(document.getElementById("xb_nar").value);
-      var yb_nar = parseFloat(document.getElementById("yb_nar").value);
+<form>
+    <h3>Punkt A</h3>
+    xA: <input type="number" id="xa_nar"><br>
+    yA: <input type="number" id="ya_nar"><br><br>
  
-      var AB = Math.sqrt(Math.pow(xb_nar - xa_nar, 2) + Math.pow(yb_nar - ya_nar, 2));
-      document.getElementById("wyniki").innerHTML = "Długość boku AB = " + AB.toFixed(2);
-    }
+    <h3>Punkt B</h3>
+    xB: <input type="number" id="xb_nar"><br>
+    yB: <input type="number" id="yb_nar"><br><br>
  
-    function BC_nar() {
-      var xb_nar = parseFloat(document.getElementById("xb_nar").value);
-      var yb_nar = parseFloat(document.getElementById("yb_nar").value);
-      var xc_nar = parseFloat(document.getElementById("xc_nar").value);
-      var yc_nar = parseFloat(document.getElementById("yc_nar").value);
+    <h3>Punkt C</h3>
+    xC: <input type="number" id="xc_nar"><br>
+    yC: <input type="number" id="yc_nar"><br><br>
  
-      var BC = Math.sqrt(Math.pow(xc_nar - xb_nar, 2) + Math.pow(yc_nar - yb_nar, 2));
-      document.getElementById("wyniki").innerHTML = "Długość boku BC = " + BC.toFixed(2);
-    }
+    <button type="button" onclick="oblicz()">Oblicz boki trójkąta</button>
+</form>
  
-    function AC_nar() {
-      var xa_nar = parseFloat(document.getElementById("xa_nar").value);
-      var ya_nar = parseFloat(document.getElementById("ya_nar").value);
-      var xc_nar = parseFloat(document.getElementById("xc_nar").value);
-      var yc_nar = parseFloat(document.getElementById("yc_nar").value);
+<h3>Wyniki:</h3>
+<div id="wynik"></div>
  
-      var AC = Math.sqrt(Math.pow(xc_nar - xa_nar, 2) + Math.pow(yc_nar - ya_nar, 2));
-      document.getElementById("wyniki").innerHTML = "Długość boku AC = " + AC.toFixed(2);
-    }
-  </script>
+<script>
+
+ 
+function ABnar(xa, ya, xb, yb) {
+    return Math.sqrt(Math.pow(xa - xb, 2) + Math.pow(ya - yb, 2));
+}
+ 
+function BC_nar(xb, yb, xc, yc) {
+    return Math.sqrt(Math.pow(xb - xc, 2) + Math.pow(yb - yc, 2));
+}
+ 
+function AC_nar(xa, ya, xc, yc) {
+    return Math.sqrt(Math.pow(xa - xc, 2) + Math.pow(ya - yc, 2));
+}
+
+ 
+function oblicz() {
+ 
+    var xa = parseFloat(document.getElementById("xa_nar").value);
+    var ya = parseFloat(document.getElementById("ya_nar").value);
+ 
+    var xb = parseFloat(document.getElementById("xb_nar").value);
+    var yb = parseFloat(document.getElementById("yb_nar").value);
+ 
+    var xc = parseFloat(document.getElementById("xc_nar").value);
+    var yc = parseFloat(document.getElementById("yc_nar").value);
+ 
+    var ab = AB_nar(xa, ya, xb, yb);
+    var bc = BC_nar(xb, yb, xc, yc);
+    var ac = AC_nar(xa, ya, xc, yc);
+ 
+    document.getElementById("wynik").innerHTML =
+        "AB = " + ab.toFixed(4) + "<br>" +
+        "BC = " + bc.toFixed(4) + "<br>" +
+        "AC = " + ac.toFixed(4);
+}
+ 
+</script>
  
 </body>
 </html>
