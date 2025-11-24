@@ -29,15 +29,15 @@
 <script>
 
  
-function AB_nar(xa, ya, xb, yb) {
+function AB_nark(xa, ya, xb, yb) {
     return Math.sqrt(Math.pow(xa - xb, 2) + Math.pow(ya - yb, 2));
 }
  
-function BC_nar(xb, yb, xc, yc) {
+function BC_nark(xb, yb, xc, yc) {
     return Math.sqrt(Math.pow(xb - xc, 2) + Math.pow(yb - yc, 2));
 }
  
-function AC_nar(xa, ya, xc, yc) {
+function AC_nark(xa, ya, xc, yc) {
     return Math.sqrt(Math.pow(xa - xc, 2) + Math.pow(ya - yc, 2));
 }
 
@@ -53,9 +53,9 @@ function oblicz() {
     var xc = parseFloat(document.getElementById("xc_nar").value);
     var yc = parseFloat(document.getElementById("yc_nar").value);
  
-    var ab = AB_nar(xa, ya, xb, yb);
-    var bc = BC_nar(xb, yb, xc, yc);
-    var ac = AC_nar(xa, ya, xc, yc);
+    var ab = AB_nark(xa, ya, xb, yb);
+    var bc = BC_nark(xb, yb, xc, yc);
+    var ac = AC_nark(xa, ya, xc, yc);
  
     document.getElementById("wynik").innerHTML =
         "AB = " + ab.toFixed(4) + "<br>" +
