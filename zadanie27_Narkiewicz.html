@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Zadanie27</title>
+<script>
+function wysokosc(odl, s) {
+  return Math.sqrt(Math.pow(s, 2) - Math.pow(odl, 2));
+}
+
+function katStartu(odl, s) {
+  return Math.atan(wysokosc(odl, s) / odl) * (180 / Math.PI);
+}
+
+function zadanie27() {
+  let odl_nar = parseFloat(document.getElementById("odl_nar").value);
+  let s_nar = parseFloat(document.getElementById("s_nar").value);
+
+  let h_nar = wysokosc(odl_nar, s_nar);
+  let kat_nar = katStartu(odl_nar, s_nar);
+
+  document.getElementById("wynik27").innerHTML =
+    "<span style='color:blue; font-size:18px;'>h = " + h_nar.toFixed(2) + " m<br>" +
+    "Kąt = " + kat_nar.toFixed(2) + "°</span>";
+}
+</script>
+</head>
+<body>
+<h2>Zadanie 27</h2>
+<form onsubmit="zadanie27(); return false;">
+  Odległość: <input id="odl_nar" size="6"><br>
+  Droga: <input id="s_nar" size="6"><br><br>
+  <input type="submit" value="Oblicz">
+</form>
+<div id="wynik27"></div>
+</body>
+</html>
