@@ -1,69 +1,80 @@
-<!DOCTYPE html>
-<html lang="pl">
+<html>
 <head>
+<title>Zadanie 20</title>
 <meta charset="UTF-8">
-<title>Zadanie 20 – obliczanie długości boków trójkąta</title>
+<script language="JavaScript">
+
+function AB_kry(xa_nark, ya_nark, xb_nark, yb_nark) {
+  xa_nark = parseFloat(xa_nark);
+  ya_nark = parseFloat(ya_nark);
+  xb_nark = parseFloat(xb_nark);
+  yb_nark = parseFloat(yb_nark);
+
+  var ab = Math.sqrt(Math.pow(xb_nark - xa_nark, 2) + Math.pow(yb_nark - ya_nark, 2));
+  document.getElementsByName('AB')[0].value = ab.toFixed(2);
+  alert("Długość AB = " + ab.toFixed(2));
+  wynik_AB.innerHTML = "AB = " + ab.toFixed(2);
+}
+
+function BC_kry(xb_nark, yb_nark, xc_nark, yc_nark) {
+  xb_nark = parseFloat(xb_nark);
+  yb_nark = parseFloat(yb_nark);
+  xc_nark = parseFloat(xc_nark);
+  yc_nark = parseFloat(yc_nark);
+
+  var bc = Math.sqrt(Math.pow(xc_nark - xb_nark, 2) + Math.pow(yc_nark - yb_nark, 2));
+  document.getElementsByName('BC')[0].value = bc.toFixed(2);
+  alert("Długość BC = " + bc.toFixed(2));
+  wynik_BC.innerHTML = "BC = " + bc.toFixed(2);
+}
+
+function AC_kry(xa_nark, ya_nark, xc_nark, yc_nark) {
+  xa_nark = parseFloat(xa_nark);
+  ya_nark = parseFloat(ya_nark);
+  xc_nark = parseFloat(xc_nark);
+  yc_nark = parseFloat(yc_nark);
+
+  var ac = Math.sqrt(Math.pow(xc_nark - xa_nark, 2) + Math.pow(yc_nark - ya_nark, 2));
+  document.getElementsByName('AC')[0].value = ac.toFixed(2);
+  alert("Długość AC = " + ac.toFixed(2));
+  wynik_AC.innerHTML = "AC = " + ac.toFixed(2);
+}
+
+function oblicz_wszystko(form) {
+  AB_kry(form.xa_nark.value, form.ya_nark.value, form.xb_nark.value, form.yb_nark.value);
+  BC_kry(form.xb_nark.value, form.yb_nark.value, form.xc_nark.value, form.yc_nark.value);
+  AC_kry(form.xa_nark.value, form.ya_nark.value, form.xc_nark.value, form.yc_nark.value);
+  return false;
+}
+
+function okno_zamknij_nark() {
+  window.close();
+}
+
+</script>
 </head>
 <body>
+<h3>Obliczanie długości boków trójkąta</h3>
 
- 
-<form>
-    <h3>Punkt A</h3>
-    xA: <input type="number" id="xa_nar"><br>
-    yA: <input type="number" id="ya_nar"><br><br>
- 
-    <h3>Punkt B</h3>
-    xB: <input type="number" id="xb_nar"><br>
-    yB: <input type="number" id="yb_nar"><br><br>
- 
-    <h3>Punkt C</h3>
-    xC: <input type="number" id="xc_nar"><br>
-    yC: <input type="number" id="yc_nar"><br><br>
- 
-    <button type="button" onclick="oblicz()">Oblicz boki trójkąta</button>
+<form name="formularz" onsubmit="return oblicz_wszystko(this)">
+Punkt A: xa=<input size="4" name="xa_nark"> ya=<input size="4" name="ya_nark"><br><br>
+Punkt B: xb=<input size="4" name="xb_nark"> yb=<input size="4" name="yb_nark"><br><br>
+Punkt C: xc=<input size="4" name="xc_nark"> yc=<input size="4" name="yc_nark"><br><br>
+
+<input type="submit" value="Oblicz boki"><br><br>
+
+AB=<input size="6" name="AB">  
+BC=<input size="6" name="BC">  
+AC=<input size="6" name="AC">
 </form>
- 
-<h3>Wyniki:</h3>
-<div id="wynik"></div>
- 
-<script>
 
- 
-function AB_nark(xa, ya, xb, yb) {
-    return Math.sqrt(Math.pow(xa - xb, 2) + Math.pow(ya - yb, 2));
-}
- 
-function BC_nark(xb, yb, xc, yc) {
-    return Math.sqrt(Math.pow(xb - xc, 2) + Math.pow(yb - yc, 2));
-}
- 
-function AC_nark(xa, ya, xc, yc) {
-    return Math.sqrt(Math.pow(xa - xc, 2) + Math.pow(ya - yc, 2));
-}
+<table>
+<tr id="wynik_AB"></tr>
+<tr id="wynik_BC"></tr>
+<tr id="wynik_AC"></tr>
+</table>
 
- 
-function oblicz() {
- 
-    var xa = parseFloat(document.getElementById("xa_nar").value);
-    var ya = parseFloat(document.getElementById("ya_nar").value);
- 
-    var xb = parseFloat(document.getElementById("xb_nar").value);
-    var yb = parseFloat(document.getElementById("yb_nar").value);
- 
-    var xc = parseFloat(document.getElementById("xc_nar").value);
-    var yc = parseFloat(document.getElementById("yc_nar").value);
- 
-    var ab = AB_nark(xa, ya, xb, yb);
-    var bc = BC_nark(xb, yb, xc, yc);
-    var ac = AC_nark(xa, ya, xc, yc);
- 
-    document.getElementById("wynik").innerHTML =
-        "AB = " + ab.toFixed(4) + "<br>" +
-        "BC = " + bc.toFixed(4) + "<br>" +
-        "AC = " + ac.toFixed(4);
-}
- 
-</script>
- 
+<br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_nark()"/>
 </body>
 </html>
