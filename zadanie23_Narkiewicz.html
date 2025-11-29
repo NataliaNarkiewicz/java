@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Zadanie 23</title>
+<meta charset="UTF-8">
+<script language="JavaScript">
+
+function dlugosc_nark(D_nark, X_nark) {
+  D_nark = parseFloat(D_nark);
+  X_nark = parseFloat(X_nark);
+  var dlugosc = Math.sqrt(Math.pow(D_nark, 2) + Math.pow(X_nark, 2));
+  document.getElementsByName('drabina')[0].value = dlugosc.toFixed(2);
+  wynik_d.innerHTML = "Drabina = " + dlugosc.toFixed(2) + " m";
+  alert("Drabina = " + dlugosc.toFixed(2) + " m");
+}
+
+function kat_nark(D_nark, X_nark) {
+  D_nark = parseFloat(D_nark);
+  X_nark = parseFloat(X_nark);
+  var alfa_rad = Math.atan(D_nark / X_nark);
+  var alfa_deg = alfa_rad * (180 / Math.PI);
+  document.getElementsByName('alfa')[0].value = alfa_deg.toFixed(2);
+  wynik_k.innerHTML = "Alfa = " + alfa_deg.toFixed(2) + "°";
+  alert("Alfa = " + alfa_deg.toFixed(2) + "°");
+}
+
+function oblicz_wszystko(form) {
+  dlugosc_nark(form.D_nark.value, form.X_nark.value);
+  kat_nark(form.D_nark.value, form.X_nark.value);
+  return false;
+}
+
+function okno_zamknij_nark() {
+  window.close();
+}
+
+</script>
+</head>
+<body>
+<h3>Obliczanie długości drabiny i kąta nachylenia</h3>
+
+<form name="formularz" onsubmit="return oblicz_wszystko(this)">
+Podaj D = <input size="6" name="D_nark">  
+Podaj X = <input size="6" name="X_nark">  
+<br><br>
+
+<input type="submit" value="Oblicz">  
+<br><br>
+
+Drabina = <input size="6" name="drabina">  
+Alfa = <input size="6" name="alfa">  
+</form>
+
+<table>
+<tr id="wynik_d"></tr>
+<tr id="wynik_k"></tr>
+</table>
+
+<br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_nark()"/>
+</body>
+</html>
