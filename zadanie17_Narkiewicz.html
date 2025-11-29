@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Zadanie17_Nar</title>
+</head>
+<body style="font-size:20px;">
+
+<h2>Zadanie 17 – Odpowiedzi teoretyczne</h2>
+
+<p><b><u>1. Wymień cztery sposoby wyprowadzania danych w JavaScript:</u></b><br>
+<b>Odpowiedź:</b><br>
+- <b>document.write()</b> – wypisywanie danych bezpośrednio na stronę.<br>
+- <b>alert()</b> – wyświetlenie danych w okienku dialogowym.<br>
+- <b>Wpisywanie danych do pól formularza</b> (np. input).<br>
+- <b>Wpisywanie danych do tabeli</b> przy użyciu modyfikacji elementów HTML.
+</p>
+
+<hr>
+
+<p><b><u>2. Czym jest funkcja w JavaScript?</u></b><br>
+<b>Odpowiedź:</b><br>
+1) <b>Funkcja to zbiór instrukcji wykonywanych po wywołaniu jej nazwy.</b><br>
+2) <b>Każda funkcja wykonuje kod znajdujący się w jej wnętrzu.</b><br>
+3) <b>Może posiadać argumenty</b>, które przekazywane są do środka funkcji (np. suma(a, b)).<br>
+4) <b>Może zwracać wartość</b> przy użyciu instrukcji <b>return</b> (ale nie musi).
+</p>
+
+<hr>
+
+<p><b><u>3. Omów metody getElementsByName, getElementById, getElementsByTagName:</u></b></p>
+
+<table border="1" cellpadding="10">
+<tr>
+<th>Metoda</th><th>Opis</th>
+</tr>
+
+<tr>
+<td><b>getElementById("id")</b></td>
+<td>Dostęp do <b>jednego elementu</b> o konkretnej wartości atrybutu <b>id</b>.</td>
+</tr>
+
+<tr>
+<td><b>getElementsByTagName("znacznik")</b></td>
+<td>Dostęp do <b>wszystkich elementów</b> o podanym znaczniku, np. DIV, P, H1.<br>
+Zwraca kolekcję (listę).</td>
+</tr>
+
+<tr>
+<td><b>getElementsByName("nazwa")</b></td>
+<td>Dostęp do <b>wszystkich elementów</b> o konkretnym atrybucie <b>name</b>.<br>
+Najczęściej używane w formularzach.</td>
+</tr>
+</table>
+
+<hr>
+
+<p><b><u>4. Omów właściwości: innerHTML, innerText, className:</u></b><br><br>
+
+<b>innerHTML</b> – pozwala <b>wstawiać, odczytywać lub modyfikować kod HTML</b> wewnątrz elementu (np. tabel, divów).<br><br>
+
+<b>innerText</b> – pozwala ustawić <b>sam tekst</b> wewnątrz elementu (bez HTML).<br><br>
+
+<b>className</b> – umożliwia przypisanie do elementu <b>klasy CSS</b>, dzięki czemu zmienia się jego wygląd.
+</p>
+
+<hr>
+
+<h3>Przykład</h3>
+
+<div id="nazwa"></div>
+
+<style>
+.wyroznienieCzerwone { 
+  color: red; 
+  font-weight: bold; 
+}
+</style>
+
+<script>
+document.getElementById("nazwa").innerHTML = "Witaj!";
+document.getElementById("nazwa").className = "wyroznienieCzerwone";
+</script>
+
+</body>
+</html>
