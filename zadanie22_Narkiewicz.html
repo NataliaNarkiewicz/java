@@ -1,59 +1,60 @@
-<!DOCTYPE html>
-<html lang="pl">
+<html>
 <head>
+<title>Zadanie 22</title>
 <meta charset="UTF-8">
-<title>Zadanie 20 – obliczanie długości boków trójkąta</title>
+<script language="JavaScript">
+
+function Pole_nark(a_nark, b_nark) {
+  a_nark = parseFloat(a_nark);
+  b_nark = parseFloat(b_nark);
+  var pole_wynik = a_nark * b_nark;
+
+  document.getElementsByName('pole')[0].value = pole_wynik.toFixed(2);
+  alert("Pole = " + pole_wynik.toFixed(2) + " cm^2");
+  wyprowadz_pole_nark.innerHTML = "Pole = " + pole_wynik.toFixed(2) + " cm^2";
+}
+
+function obwod_nark(a_nark, b_nark) {
+  a_nark = parseFloat(a_nark);
+  b_nark = parseFloat(b_nark);
+  var obwod_wynik = 2 * a_nark + 2 * b_nark;
+
+  document.getElementsByName('obw')[0].value = obwod_wynik.toFixed(2);
+  alert("Obwód = " + obwod_wynik.toFixed(2) + " cm");
+  wyprowadz_obwod_nark.innerHTML = "Obwód = " + obwod_wynik.toFixed(2) + " cm";
+}
+
+function okno_zamknij_nark() {
+  window.close();
+}
+
+</script>
 </head>
 <body>
+<h3>Obliczanie pola oraz obwodu prostokąta</h3>
 
- 
-<form>
-    <h3>Punkt A</h3>
-    a: <input type="number" id="a_dana_nar"><br>
-   
- 
-    <h3>Punkt B</h3>
-    b: <input type="number" id="b_dana_nar"><br>
- 
- 
-    <button type="button" onclick="oblicz()">Oblicz pole i obwód prostokąta</button>
+<form name="formularz" action="..." 
+      onsubmit="Pole_nark(this.a_dana_nark.value,this.b_dana_nark.value);
+                obwod_nark(this.a_dana_nark.value,this.b_dana_nark.value);
+                return false">
+
+Podaj a = <input size="6" name="a_dana_nark">
+Podaj b = <input size="6" name="b_dana_nark">
+<br><br>
+
+<input type="submit" value="Oblicz">
+<br><br>
+
+Pole = <input size="6" name="pole">
+Obwód = <input size="6" name="obw">
 </form>
- 
-<h3>Wyniki:</h3>
-<div id="wynik"></div>
- 
-<script>
 
- 
-function Pole_narkiewicz(a_dana_nar, b_dana_nar) {
-    return Math.sqrt(Math.pow(a_dana_nar * a_dana_nar, 2));
-}
- 
-function obwod_narkiewicz(a_dana_nar, b_dana_nar) {
-    return Math.sqrt(Math.pow(a_dana_nar, b_dana_nar, 2) + Math.pow(a_dana_nar, b_dana_nar, 2));
-}
- 
+<table>
+<tr id="wyprowadz_pole_nark"></tr>
+<tr id="wyprowadz_obwod_nark"></tr>
+</table>
 
-
- 
-function oblicz() {
- 
-    var a_dana_nar = parseFloat(document.getElementById("a_dana_nar").value);
-    var  b_dana_nar= parseFloat(document.getElementById("b_dana_nar").value);
- 
-
- 
-   /*var a_dana_nark = AB_nark(xa, ya, xb, yb);
-   /*var bc = BC_nark(xb, yb, xc, yc);
-   
- 
-    document.getElementById("wynik").innerHTML =
-        "AB = " + ab.toFixed(4) + "<br>" +
-        "BC = " + bc.toFixed(4) + "<br>" +
-        "AC = " + ac.toFixed(4);
-}
- 
-</script>
- 
+<br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_nark()"/>
 </body>
 </html>
