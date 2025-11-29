@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Zadanie25</title>
+<script>
+function zadanie25() {
+  let N0 = parseFloat(prompt("Podaj N₀ [sztuk]:"));
+  let t = parseFloat(prompt("Podaj t [lat]:"));
+  let T12 = parseFloat(prompt("Podaj T₁/₂ [lat]:"));
+
+  let lambda = Math.log(2) / T12;
+  let N = N0 * Math.pow(Math.E, -lambda * t);
+
+  document.getElementById("wyniki").innerHTML =
+    "<span style='color:darkgreen; font-size:18px;'>λ = " + lambda.toFixed(7) + " [1/rok]<br>" +
+    "N = " + N.toFixed(2) + " [sztuk]</span>";
+}
+</script>
+</head>
+<body>
+<h2>Zadanie 25</h2>
+<button onclick="zadanie25()">Uruchom zadanie25</button>
+<div id="wyniki"></div>
+</body>
+</html>
