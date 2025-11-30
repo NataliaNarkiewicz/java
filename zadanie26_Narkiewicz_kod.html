@@ -1,32 +1,37 @@
-<html> 
-  <head>
-  <META charset="UTF-8"> 
-</head> 
-  <body>
-  <h3><b>KOD HTML</b></h3>
-  <textarea id="textarea" name="textarea" rows="20" cols="80">
-  
 <html>
 <head>
-<title>Zadanie25</title>
+<title>Zadanie26</title>
 <script>
-function zadanie25() {
-  let N0 = parseFloat(prompt("Podaj N₀ [sztuk]:"));
-  let t = parseFloat(prompt("Podaj t [lat]:"));
-  let T12 = parseFloat(prompt("Podaj T₁/₂ [lat]:"));
+function Pow_nar(a, b, h) {
+  return ((parseFloat(a) + parseFloat(b)) / 2) * parseFloat(h);
+}
 
-  let lambda = Math.log(2) / T12;
-  let N = N0 * Math.pow(Math.E, -lambda * t);
+function Obw_nar(a, b, h) {
+  let ramie = Math.sqrt(Math.pow(Math.abs((a - b) / 2), 2) + Math.pow(h, 2));
+  return parseFloat(a) + parseFloat(b) + 2 * ramie;
+}
 
-  document.getElementById("wyniki").innerHTML =
-    "<span style='color:darkgreen; font-size:18px;'>λ = " + lambda.toFixed(7) + " [1/rok]<br>" +
-    "N = " + N.toFixed(2) + " [sztuk]</span>";
+function zadanie26() {
+  let a = parseFloat(document.getElementById("a").value);
+  let b = parseFloat(document.getElementById("b").value);
+  let h = parseFloat(document.getElementById("h").value);
+
+  let pole = Pow_nar(a, b, h);
+  let obwod = Obw_nar(a, b, h);
+
+  document.write("Pole = " + pole.toFixed(2) + " cm²<br>");
+  document.write("Obwód = " + obwod.toFixed(2) + " cm<br>");
 }
 </script>
 </head>
 <body>
-<h2>Zadanie 25</h2>
-<button onclick="zadanie25()">Uruchom zadanie25</button>
-<div id="wyniki"></div>
+<h2>Zadanie 26</h2>
+<form onsubmit="zadanie26(); return false;">
+  a: <input id="a" size="6"><br>
+  b: <input id="b" size="6"><br>
+  h: <input id="h" size="6"><br><br>
+  <input type="submit" value="Oblicz">
+</form>
 </body>
 </html>
+<!-- Natalia Nrkiewicz -->
