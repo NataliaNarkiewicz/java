@@ -19,27 +19,17 @@
 
   <script type="text/javascript">
     function zadanie24() {
-      // 1) Wczytaj dane
+
       let x1_nar = parseFloat(prompt("Podaj wartość x1 (w stopniach):"));
       let x2_nar = parseFloat(prompt("Podaj wartość x2:"));
-
-      // 2) Wyświetl wczytane dane z odstępami
       let dane = "Wczytane liczby:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x1=" + x1_nar + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x2=" + x2_nar + "<br>";
-
-      // 3) Oblicz y1
       let liczbaLiterImienia = 7; // np. "Natalia" → 7 liter
       let y1 = 3 * Math.pow(x1_nar, liczbaLiterImienia + 2);
-
-      // 4) Zamiana stopni na radiany
       let x1_rad = (x1_nar * Math.PI) / 180;
-
-      // Oblicz y2
       let y2 = 2 * Math.cos(x1_rad) + 3 * Math.sin(x1_rad);
-
-      // 5) Oblicz y3
       let y3 = Math.cbrt(Math.pow(x1_nar, 5) + 2 * Math.pow(x2_nar, 4) * Math.abs(x1_nar - x2_nar));
 
-      // 6) Wyświetl wyniki
+ 
       let wynik = dane +
         "x1=" + x1_nar + " [stopniach]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x1=" + x1_rad.toFixed(2) + " [radianach]<br>" +
         "y1 = " + y1.toFixed(2) + "<br>" +
@@ -51,3 +41,4 @@
   </script>
 </body>
 </html>
+        <!-- Natalia Nrkiewicz -->
