@@ -5,94 +5,84 @@
   <body>
       <h3><b>KOD HTML</b></h3>
       <textarea id="textarea" name="textarea" rows="20" cols="80">
-<!DOCTYPE html>
-<html lang="pl">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Nar - Zadanie 20</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #eef;
-      text-align: center;
-      margin-top: 30px;
-    }
-    input {
-      width: 80px;
-      margin: 5px;
-      padding: 5px;
-      text-align: center;
-    }
-    button {
-      padding: 10px 15px;
-      margin: 10px;
-      border: none;
-      background-color: #0077cc;
-      color: white;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #005fa3;
-    }
-    .wyniki {
-      margin-top: 20px;
-      font-size: 18px;
-    }
-  </style>
+<title>Zadanie 20</title>
+<meta charset="UTF-8">
+<script language="JavaScript">
+
+function AB_nar(xa_nark, ya_nark, xb_nark, yb_nark) {
+  xa_nark = parseFloat(xa_nark);
+  ya_nark = parseFloat(ya_nark);
+  xb_nark = parseFloat(xb_nark);
+  yb_nark = parseFloat(yb_nark);
+
+  var ab = Math.sqrt(Math.pow(xb_nark - xa_nark, 2) + Math.pow(yb_nark - ya_nark, 2));
+  document.getElementsByName('AB')[0].value = ab.toFixed(2);
+  alert("Długość AB = " + ab.toFixed(2));
+  wynik_AB.innerHTML = "AB = " + ab.toFixed(2);
+}
+
+function BC_nar(xb_nark, yb_nark, xc_nark, yc_nark) {
+  xb_nark = parseFloat(xb_nark);
+  yb_nark = parseFloat(yb_nark);
+  xc_nark = parseFloat(xc_nark);
+  yc_nark = parseFloat(yc_nark);
+
+  var bc = Math.sqrt(Math.pow(xc_nark - xb_nark, 2) + Math.pow(yc_nark - yb_nark, 2));
+  document.getElementsByName('BC')[0].value = bc.toFixed(2);
+  alert("Długość BC = " + bc.toFixed(2));
+  wynik_BC.innerHTML = "BC = " + bc.toFixed(2);
+}
+
+function AC_nar(xa_nark, ya_nark, xc_nark, yc_nark) {
+  xa_nark = parseFloat(xa_nark);
+  ya_nark = parseFloat(ya_nark);
+  xc_nark = parseFloat(xc_nark);
+  yc_nark = parseFloat(yc_nark);
+
+  var ac = Math.sqrt(Math.pow(xc_nark - xa_nark, 2) + Math.pow(yc_nark - ya_nark, 2));
+  document.getElementsByName('AC')[0].value = ac.toFixed(2);
+  alert("Długość AC = " + ac.toFixed(2));
+  wynik_AC.innerHTML = "AC = " + ac.toFixed(2);
+}
+
+function oblicz_wszystko(form) {
+  AB_nar(form.xa_nark.value, form.ya_nark.value, form.xb_nark.value, form.yb_nark.value);
+  BC_nar(form.xb_nark.value, form.yb_nark.value, form.xc_nark.value, form.yc_nark.value);
+  AC_nar(form.xa_nark.value, form.ya_nark.value, form.xc_nark.value, form.yc_nark.value);
+  return false;
+}
+
+function okno_zamknij_nark() {
+  window.close();
+}
+
+</script>
 </head>
 <body>
- 
-  <h2>Nar - Zadanie 20</h2>
-  <p>Podaj współrzędne punktów A, B i C:</p>
+<h3>Obliczanie długości boków trójkąta</h3>
 
-  <button onclick="AB_nar()">Oblicz AB</button>
-  <button onclick="BC_nar()">Oblicz BC</button>
-  <button onclick="AC_nar()">Oblicz AC</button>
-    <script>
-     
-      var xa_nar = parseFloat(prompt("Podaj xa:", ""));
-      var ya_nar = parseFloat(prompt("Podaj ya:", ""));
-      var xb_nar = parseFloat(prompt("Podaj xb:", ""));
-      var yb_nar = parseFloat(prompt("Podaj yb:", ""));
-      var xc_nar = parseFloat(prompt("Podaj xc:", ""));
-      var yc_nar = parseFloat(prompt("Podaj yc:", ""));
-  <div class="wyniki" id="wyniki"></div>
- 
+<form name="formularz" onsubmit="return oblicz_wszystko(this)">
+Punkt A: xa=<input size="4" name="xa_nark"> ya=<input size="4" name="ya_nark"><br><br>
+Punkt B: xb=<input size="4" name="xb_nark"> yb=<input size="4" name="yb_nark"><br><br>
+Punkt C: xc=<input size="4" name="xc_nark"> yc=<input size="4" name="yc_nark"><br><br>
 
- 
-  <script>
-    function AB_nar() {
-      var xa_nar = parseFloat(document.getElementById("xa_nar").value);
-      var ya_nar = parseFloat(document.getElementById("ya_nar").value);
-      var xb_nar = parseFloat(document.getElementById("xb_nar").value);
-      var yb_nar = parseFloat(document.getElementById("yb_nar").value);
- 
-      var AB = Math.sqrt(Math.pow(xb_nar - xa_nar, 2) + Math.pow(yb_nar - ya_nar, 2));
-      document.getElementById("wyniki").innerHTML = "Długość boku AB = " + AB.toFixed(2);
-    }
- 
-    function BC_nar() {
-      var xb_nar = parseFloat(document.getElementById("xb_nar").value);
-      var yb_nar = parseFloat(document.getElementById("yb_nar").value);
-      var xc_nar = parseFloat(document.getElementById("xc_nar").value);
-      var yc_nar = parseFloat(document.getElementById("yc_nar").value);
- 
-      var BC = Math.sqrt(Math.pow(xc_nar - xb_nar, 2) + Math.pow(yc_nar - yb_nar, 2));
-      document.getElementById("wyniki").innerHTML = "Długość boku BC = " + BC.toFixed(2);
-    }
- 
-    function AC_nar() {
-      var xa_nar = parseFloat(document.getElementById("xa_nar").value);
-      var ya_nar = parseFloat(document.getElementById("ya_nar").value);
-      var xc_nar = parseFloat(document.getElementById("xc_nar").value);
-      var yc_nar = parseFloat(document.getElementById("yc_nar").value);
- 
-      var AC = Math.sqrt(Math.pow(xc_nar - xa_nar, 2) + Math.pow(yc_nar - ya_nar, 2));
-      document.getElementById("wyniki").innerHTML = "Długość boku AC = " + AC.toFixed(2);
-    }
-  </script>
- 
+<input type="submit" value="Oblicz boki"><br><br>
+
+AB=<input size="6" name="AB">  
+BC=<input size="6" name="BC">  
+AC=<input size="6" name="AC">
+</form>
+
+<table>
+<tr id="wynik_AB"></tr>
+<tr id="wynik_BC"></tr>
+<tr id="wynik_AC"></tr>
+</table>
+
+<br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_nark()"/>
 </body>
 </html>
         <!-- Natalia Nrkiewicz -->
