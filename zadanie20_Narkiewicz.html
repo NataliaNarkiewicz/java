@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <script language="JavaScript">
 
-function AB_kry(xa_nark, ya_nark, xb_nark, yb_nark) {
+function AB_nar(xa_nark, ya_nark, xb_nark, yb_nark) {
   xa_nark = parseFloat(xa_nark);
   ya_nark = parseFloat(ya_nark);
   xb_nark = parseFloat(xb_nark);
@@ -16,7 +16,7 @@ function AB_kry(xa_nark, ya_nark, xb_nark, yb_nark) {
   wynik_AB.innerHTML = "AB = " + ab.toFixed(2);
 }
 
-function BC_kry(xb_nark, yb_nark, xc_nark, yc_nark) {
+function BC_nar(xb_nark, yb_nark, xc_nark, yc_nark) {
   xb_nark = parseFloat(xb_nark);
   yb_nark = parseFloat(yb_nark);
   xc_nark = parseFloat(xc_nark);
@@ -28,7 +28,7 @@ function BC_kry(xb_nark, yb_nark, xc_nark, yc_nark) {
   wynik_BC.innerHTML = "BC = " + bc.toFixed(2);
 }
 
-function AC_kry(xa_nark, ya_nark, xc_nark, yc_nark) {
+function AC_nar(xa_nark, ya_nark, xc_nark, yc_nark) {
   xa_nark = parseFloat(xa_nark);
   ya_nark = parseFloat(ya_nark);
   xc_nark = parseFloat(xc_nark);
@@ -41,9 +41,9 @@ function AC_kry(xa_nark, ya_nark, xc_nark, yc_nark) {
 }
 
 function oblicz_wszystko(form) {
-  AB_kry(form.xa_nark.value, form.ya_nark.value, form.xb_nark.value, form.yb_nark.value);
-  BC_kry(form.xb_nark.value, form.yb_nark.value, form.xc_nark.value, form.yc_nark.value);
-  AC_kry(form.xa_nark.value, form.ya_nark.value, form.xc_nark.value, form.yc_nark.value);
+  AB_nar(form.xa_nark.value, form.ya_nark.value, form.xb_nark.value, form.yb_nark.value);
+  BC_nar(form.xb_nark.value, form.yb_nark.value, form.xc_nark.value, form.yc_nark.value);
+  AC_nar(form.xa_nark.value, form.ya_nark.value, form.xc_nark.value, form.yc_nark.value);
   return false;
 }
 
