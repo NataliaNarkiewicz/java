@@ -1,1 +1,57 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Z33 Narkiewicz</title>
+</head>
+<body>
+ 
+<script>
+ 
+function User(email, haslo, avatar)
+{
+this.email = email;
+this.haslo = haslo;
+this.avatar = avatar;
+}
+ 
+var userListNar = new Array();
+ 
+function addUserNar(user)
+{
+userListNar.push(user);
+}
+ 
+function loginNar(email, haslo)
+{
+for(var i=0; i<userListNar.length; i++)
+{
+if(userListNar[i].email == email && userListNar[i].haslo == haslo)
+{
+return true;
+}
+}
+return false;
+}
+ 
+var u1 = new User("test@test.pl","1234","avatar.jpg");
+addUserNar(u1);
+ 
+var emailNar = prompt("Podaj email:");
+var hasloNar = prompt("Podaj hasło:");
+ 
+if(loginNar(emailNar, hasloNar))
+{
+document.write("<font color='green'>Zalogowano poprawnie</font>");
+}
+else
+{
+document.write("<font color='red'>Błędne dane</font>");
+}
+ 
+</script>
+ 
+<!-- Narkiewicz Z33 -->
+</body>
+</html>
