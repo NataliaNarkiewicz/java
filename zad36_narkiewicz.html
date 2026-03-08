@@ -1,28 +1,29 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="pl-PL">
 <head>
-<meta charset="UTF-8">
-<title>Z36 Narkiewicz</title>
+ <meta charset="UTF-8">
+ <title>Narkiewicz Z36_JS</title>
 </head>
 <body>
- 
-<script>
- 
-var liczba_nar;
-liczba_nar = prompt("Podaj liczbę:");
- 
-if(liczba_nar % 2 == 0)
+
+<script language="JavaScript">
+
+var x=prompt("podaj liczbę x=","");
+var a_dana_nar=parseFloat(x);
+
+document.write("czytana liczba x="+a_dana_nar+"<br>");
+
+if(a_dana_nar%2==0)
 {
-document.write("<font color='red' size='3'>liczba jest parzysta</font>");
+ document.write("<font color=red size=3>liczba jest parzysta</font>"+"<br>");
 }
 else
 {
-document.write("<font color='silver' size='5'>liczba jest nieparzysta</font>");
+ document.write("<font color=silver size=5>liczba jest nieparzysta</font>"+"<br>");
 }
- 
+
 </script>
- 
-<!-- Narkiewicz Z36 -->
+
 </body>
 </html>
+<!-- Narkiewicz Z36_JS -->
