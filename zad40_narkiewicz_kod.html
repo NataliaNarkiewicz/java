@@ -1,0 +1,48 @@
+<html> 
+  <head> 
+  <META charset="UTF-8"> 
+</head>
+  <body>
+  <h3><b>KOD HTML</b></h3>
+  <textarea id="textarea" name="textarea" rows="20" cols="80">
+    <!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+ <meta charset="UTF-8">
+ <title>Narkiewicz Z40_JS</title>
+</head>
+<body>
+<div style="color:red;font-size:50px;">
+<script language="JavaScript">
+
+var x = prompt("podaj argument x=","");
+var x_nar = parseFloat(x);
+
+document.write("czytany argument x=" + x_nar.toFixed(2) + "<br>");
+
+function f_nar(x_nar) {
+
+    if(x_nar >= 2) {
+        return 9;
+    }
+
+    if(x_nar >= 0 && x_nar < 2) {
+        return x_nar*x_nar*x_nar + 1;
+    }
+
+    if(x_nar > -2 && x_nar < 0) {
+        return (x_nar + 1)*(x_nar + 1);
+    }
+
+    if(x_nar <= -2) {
+        return 1;
+    }
+}
+
+document.write("f(x)=" + f_nar(x_nar).toFixed(2) + "<br>");
+
+</script>
+</div>
+</body>
+</html>
+<!-- Narkiewicz Z40_JS -->
