@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
 <head>
-  <meta charset="UTF-8">
-  <title>Z40 Narkiewicz 3F</title>
+ <meta charset="UTF-8">
+ <title>Narkiewicz Z40_JS</title>
 </head>
-<!-- polskie litery mają działać(uzupełnij w kodzie strony meta) -->
-<!-- title -> Z40 Narkiewicz 3F -->
 <body>
 <div style="color:red;font-size:50px;">
- <script language="JavaScript">
-var x=prompt("podaj argument x=","");
- var x_nar=parseFloat(x);
-//zmienna x_kow (zmień _kow na Twoje nazwisko)
-document.write("wykonała Natalia Narkiewicz"+"<br>");
- document.write("czytany argument x="+x_nar+"<br>");
- function f_nar(x_nar) {
- if(x_nar>=1) {return 1;}
- if((x_nar>=-2)&&(x_nar<1)) {return x_nar*x_nar;}
- if(x_nar<-2) {return 4;}
- }
- document.write("f(f_nar)="+f_nar(x_nar)+"<br>");
- </script>
+<script language="JavaScript">
+
+var x = prompt("podaj argument x=","");
+var x_nar = parseFloat(x);
+
+document.write("czytany argument x=" + x_nar.toFixed(2) + "<br>");
+
+function f_nar(x_nar) {
+
+    if(x_nar >= 2) {
+        return 9;
+    }
+
+    if(x_nar >= 0 && x_nar < 2) {
+        return x_nar*x_nar*x_nar + 1;
+    }
+
+    if(x_nar > -2 && x_nar < 0) {
+        return (x_nar + 1)*(x_nar + 1);
+    }
+
+    if(x_nar <= -2) {
+        return 1;
+    }
+}
+
+document.write("f(x)=" + f_nar(x_nar).toFixed(2) + "<br>");
+
+</script>
 </div>
 </body>
 </html>
 <!-- Narkiewicz Z40_JS -->
-``
