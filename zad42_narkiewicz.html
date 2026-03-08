@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Narkiewicz Z42_JS</title>
+</head>
+<body style="background:silver;">
+
+<script>
+
+var imie = "Natalia";
+var nazwisko = "Narkiewicz";
+var liczba1 = 7;  
+var liczba2 = 14;
+var liczba3 = 10;  
+var liczba4 = 14;  
+
+var opcja1 = 7;    
+var opcja2 = 30;  
+var opcja3 = 69;   
+
+var rozmiar = 45;  
+
+
+document.write("<div style='color:green; font-size:"+rozmiar+"px;'>");
+document.write("Imię: "+imie+"<br>");
+document.write("Nazwisko: "+nazwisko+"<br>");
+document.write("liczba1="+liczba1+" liczba2="+liczba2+" liczba3="+liczba3+" liczba4="+liczba4+"<br>");
+document.write("</div><br>");
+
+
+document.write("<div style='color:red; font-size:"+rozmiar+"px;'>");
+document.write("-------------MENU--------------<br>");
+document.write(opcja1+" - wyświetlanie teorii o operatorach<br>");
+document.write(opcja2+" - czy liczba należy do przedziału ("+liczba1+" ; "+liczba2+"]<br>");
+document.write(opcja3+" - czy liczba należy do przedziału (-∞ ; "+liczba3+") lub ["+liczba4+" ; +∞)<br>");
+document.write("</div><br>");
+
+
+var opcja_nar = prompt("Podaj numer opcji:", "");
+
+
+if(opcja_nar == opcja1) {
+    document.write("<font color=green size=7>Jesteś w opcji "+opcja1+" --> teoria</font><br>");
+
+    document.write("<font color=blue size=6>&& i x=3 y=4 (x < 9 && y > 2) wynik-->prawda</font><br>");
+    document.write("<font color=green size=6>|| lub x=3 y=4 (x == 8 || y==6) wynik-->fałsz</font><br>");
+    document.write("<font color=blue size=6>! zaprzeczenie x=3 y=4 !(x==y) wynik-->prawda</font><br>");
+}
+
+
+if(opcja_nar == opcja2) {
+
+    document.write("<font color=green size=7>Jesteś w opcji "+opcja2+" --> przedział</font><br>");
+
+    var liczba_nar = prompt("Podaj liczbę:", "");
+    liczba_nar = parseFloat(liczba_nar);
+
+    if( (liczba_nar > liczba1) && (liczba_nar <= liczba2) ) {
+        document.write("<font color=blue size=6>liczba należy do przedziału ("+liczba1+" ; "+liczba2+"]</font><br>");
+    } else {
+        document.write("<font color=red size=6>liczba nie należy do przedziału ("+liczba1+" ; "+liczba2+"]</font><br>");
+    }
+}
+
+if(opcja_nar == opcja3) {
+
+    document.write("<font color=green size=7>Jesteś w opcji "+opcja3+" --> przedział</font><br>");
+
+    var liczba2_nar = prompt("Podaj liczbę:", "");
+    liczba2_nar = parseFloat(liczba2_nar);
+
+    if( (liczba2_nar < liczba3) || (liczba2_nar >= liczba4) ) {
+        document.write("<font color=blue size=6>liczba należy do przedziału (-∞ ; "+liczba3+") lub ["+liczba4+" ; +∞)</font><br>");
+    } else {
+        document.write("<font color=red size=6>liczba nie należy do przedziału (-∞ ; "+liczba3+") lub ["+liczba4+" ; +∞)</font><br>");
+    }
+}
+
+
+if( (opcja_nar != opcja1) && (opcja_nar != opcja2) && (opcja_nar != opcja3) ) {
+    document.write("<font color=red size=7>Nie ma takiej opcji</font><br>");
+}
+
+</script>
+
+</body>
+</html>
+<!-- Narkiewicz Z42_JS -->
