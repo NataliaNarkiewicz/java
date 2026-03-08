@@ -1,31 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl-PL">
 <head>
-<meta charset="UTF-8">
-<title>Z35 Narkiewicz</title>
+    <meta charset="UTF-8">
+    <title>Narkiewicz Z35_JS</title>
 </head>
 <body>
- 
-<script>
- 
-var a_dana_nar;
-a_dana_nar = prompt("Podaj liczbę:");
- 
+
+<div style="color:red;font-size:50px;">
+<script language="JavaScript">
+
+var x = prompt("Natalia Narkiewicz  – podaj liczbę x = ","");
+var a_dana_nar = parseFloat(x);
+
+document.write("Czytana liczba x = " + a_dana_nar + "<br>");
+
 if(a_dana_nar > 0)
 {
-document.write("Liczba jest dodatnia");
+    document.write("Liczba jest większa od 0<br>");
 }
-else if(a_dana_nar == 0)
+
+if(a_dana_nar == 0)
 {
-document.write("Liczba jest równa zero");
+    document.write("Liczba jest równa 0<br>");
 }
-else
+
+if(a_dana_nar < 0)
 {
-document.write("Liczba jest ujemna");
+    document.write("Liczba jest mniejsza od 0<br>");
 }
- 
+
 </script>
- 
-<!-- Narkiewicz Z35 -->
+</div>
+
 </body>
 </html>
+<!-- Narkiewicz Z35_JS -->
