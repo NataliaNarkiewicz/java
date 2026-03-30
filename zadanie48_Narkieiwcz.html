@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 47 - Sprawdzanie Trójkąta_narkiewicz</title>
+    <script>
+        function sprawdzTrojkat() {
+            let a_nar, b_nar, c_nar;
+            let poprawny = false;
+
+            do {
+                a_nar = parseFloat(prompt("Podaj długość boku a (w1):"));
+                b_nar = parseFloat(prompt("Podaj długość boku b (w2):"));
+                c_nar = parseFloat(prompt("Podaj długość boku c (w3):"));
+
+                
+                if (
+                    (a_nar > 0 && b_nar > 0 && c_nar > 0) &&
+                    (a_nar + b_nar > c_nar) &&
+                    (a_nar + c_nar > b_nar) &&
+                    (c_nar + b_nar > a_nar)
+                ) {
+                    poprawny = true;
+                    alert("Brawo! Boki: " + a_nar + ", " + b_nar + ", " + c_nar + " tworzą trójkąt.");
+                } else {
+                    alert("Błąd! Boki muszą być > 0 i spełniać nierówność trójkąta. Spróbuj ponownie.");
+                }
+            } while (!poprawny);
+        }
+    </script>
+</head>
+<body>
+    <h3>Zadanie 47 - Sprawdzanie trójkąta (pętla do...while)</h3>
+    <button onclick="sprawdzTrojkat()">Sprawdź boki trójkąta</button>
+</body>
+</html>
