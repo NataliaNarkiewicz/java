@@ -11,24 +11,24 @@
 <script>
  
 do {
-    var liczba = prompt("Podaj n =", "");
-    var n = parseInt(liczba);
+    var liczba_nar = prompt("Podaj n =", "");
+    var n_nar = parseInt(liczba_nar);
  
-} while (n < 0 || isNaN(n));
+} while (n_nar < 0 || isNaN(n));
  
-var silnia = 1;
+var silnia_nar = 1;
  
-if (n == 0) {
-    silnia = 1;
+if (n_nar == 0) {
+    silnia_nar = 1;
 }
 else {
-    for (var i = 1; i <= n; i++) {
-        silnia = silnia * i;
+    for (var i_nar = 1; i_nar <= n_nar; i_nar++) {
+        silnia_nar = silnia_nar * i_nar;
     }
 }
  
-document.write("n = " + n + "<br>");
-document.write(n + "! = " + silnia);
+document.write("n_nar = " + n_nar + "<br>");
+document.write(n_nar + "! = " + silnia_nar);
  
 </script>
  
