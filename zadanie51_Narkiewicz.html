@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Silnia</title>
+</head>
+ 
+<body>
+<div style="color:red; font-size:50px;">
+ 
+<script>
+ 
+do {
+    var liczba = prompt("Podaj n =", "");
+    var n = parseInt(liczba);
+ 
+} while (n < 0 || isNaN(n));
+ 
+var silnia = 1;
+ 
+if (n == 0) {
+    silnia = 1;
+}
+else {
+    for (var i = 1; i <= n; i++) {
+        silnia = silnia * i;
+    }
+}
+ 
+document.write("n = " + n + "<br>");
+document.write(n + "! = " + silnia);
+ 
+</script>
+ 
+</div>
+</body>
+</html>
+<!--  Narkiewicz Z35_JS  --> 
