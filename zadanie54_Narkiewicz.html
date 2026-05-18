@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+ 
+<head>
+    <meta charset="utf-8">
+    <title>Przykład użycia pętli</title>
+ 
+    <script language="JavaScript">
+ 
+        var poziom_nar = 26;
+        var pion_nar = 6;
+ 
+        for (var i = 1; i <= poziom_nar; i++) {
+            document.write("*");
+        }
+ 
+        document.write("<br>");
+ 
+    
+        for (var i = 1; i <= pion_nar; i++) {
+            document.write("*");
+            
+            for (var spacja = 1; spacja <= poziom_nar - 2; spacja++) {
+                document.write("&nbsp;");
+            }
+ 
+            document.write("*<br>");
+        }
+ 
+        for (var i = 1; i <= poziom_nar; i++) {
+            document.write("*");
+        }
+ 
+    </script>
+ 
+</head>
+ 
+<body>
+</body>
+ 
+</html>
+ 
