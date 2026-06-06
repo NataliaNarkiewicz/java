@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 48 – Natalia Narkiewicz</title>
+</head>
+<body>
+
+<h2>Kod programu:</h2>
+
+<pre style="font-size:18px; color:black;">
+&lt;script&gt;
+
+do {
+    var liczba1_nar = prompt("wysokość =", "");
+    var h_nar = parseFloat(liczba1_nar);
+}
+while (h_nar &lt;= 0);
+
+do {
+    var liczba1_nar = prompt("podstawę =", "");
+    var a_nar = parseFloat(liczba1_nar);
+}
+while (!(a_nar &gt; 0));
+
+var Pole_nar = a_nar * h_nar / 2;
+
+document.write("Pole = " + Pole_nar.toFixed(2) + " cm²&lt;br&gt;");
+
+&lt;/script&gt;
+</pre>
+
+</body>
+</html>
