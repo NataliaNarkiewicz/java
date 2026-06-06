@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 53 – Narkiewicz</title>
+</head>
+<body>
+
+<h3><b>KOD HTML</b></h3>
+
+<textarea id="textarea" name="textarea" rows="30" cols="90">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 53 –  Narkiewicz</title>
+</head>
+<body>
+
+
+<div style="color:red; margin-left:2cm; font-size:30px;">
+Narkiewicz
+</div>
+
+
+<div style="color:blue; margin-left:5mm; font-size:24px;">
+Temat: Wyprowadzanie liczb z inicjałami i przesunięciem o spację
+</div>
+
+<br>
+
+<div style="font-size:30px;">
+<script>
+let ile_razy_nar = prompt("Ile razy powtórzyć napis =", "");
+ile_razy_nar = parseInt(ile_razy_nar);
+
+
+let inicjaly_nar = prompt("Podaj swoje inicjały =", "");
+
+
+for (let i_nar = 1; i_nar <= ile_razy_nar; i_nar++) {
+
+
+    for (let k_nar = 1; k_nar <= i_nar; k_nar++) {
+        document.write("&nbsp");
+    }
+
+
+    document.write(i_nar + "_" + inicjaly_nar + "_" + i_nar + "<br>");
+}
+</script>
+</div>
+
+</body>
+</html>
+</textarea>
+
+</body>
+</html>
