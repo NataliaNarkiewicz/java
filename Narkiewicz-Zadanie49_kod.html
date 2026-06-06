@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 49 –Natalia Narkiewicz</title>
+</head>
+<body>
+
+<h2>Kod programu:</h2>
+
+<pre style="font-size:18px; color:black;">
+&lt;script&gt;
+
+do {
+
+    var liczba1_nar = prompt("Podaj bok a =", "");
+    var a_nar = parseFloat(liczba1_nar);
+
+    liczba1_nar = prompt("Podaj bok b =", "");
+    var b_nar = parseFloat(liczba1_nar);
+
+    liczba1_nar = prompt("Podaj bok c =", "");
+    var c_nar = parseFloat(liczba1_nar);
+
+}
+while (
+    !(a_nar &gt; 0 && b_nar &gt; 0 && c_nar &gt; 0 &&
+      a_nar + b_nar &gt; c_nar &&
+      a_nar + c_nar &gt; b_nar &&
+      b_nar + c_nar &gt; a_nar)
+);
+
+document.write("Podane boki tworzą trójkąt.&lt;br&gt;");
+document.write("a = " + a_nar + "&lt;br&gt;");
+document.write("b = " + b_nar + "&lt;br&gt;");
+document.write("c = " + c_nar + "&lt;br&gt;");
+
+&lt;/script&gt;
+</pre>
+
+</body>
+</html>
