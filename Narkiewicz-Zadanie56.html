@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 56 – Natalia Narkiewicz</title>
+</head>
+<body>
+
+<script>
+
+
+let imie_nar = prompt("Podaj imię:", "");
+let nazwisko_nar = prompt("Podaj nazwisko:", "");
+
+
+let a_nar = (nazwisko_nar.length % 4) + 5;
+let b_nar = (imie_nar.length % 6) + 20;
+
+
+for (let i_nar = 1; i_nar <= b_nar; i_nar++) {
+    document.write("*");
+}
+document.write("<br>");
+
+
+for (let w_nar = 1; w_nar <= a_nar - 2; w_nar++) {
+
+    document.write("*"); 
+
+    for (let spacja_nar = 1; spacja_nar <= b_nar - 2; spacja_nar++) {
+        document.write("&nbsp;");
+    }
+
+    document.write("*<br>"); 
+}
+
+for (let i_nar = 1; i_nar <= b_nar; i_nar++) {
+    document.write("*");
+}
+
+</script>
+
+</body>
+</html>
