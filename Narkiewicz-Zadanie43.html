@@ -3,114 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <title>Zadanie 43 – Rodzaje pętli</title>
-
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background: #f0f0f0;
-        padding: 20px;
-    }
-    h1 {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-    .blok {
-        background: white;
-        padding: 20px;
-        margin-bottom: 25px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .kod {
-        background: #222;
-        color: #0f0;
-        padding: 10px;
-        border-radius: 5px;
-        white-space: pre-wrap;
-        margin-bottom: 10px;
-    }
-    .zdjecie {
-        width: 100%;
-        height: 220px;
-        border: 2px dashed #888;
-        border-radius: 8px;
-        margin-top: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #444;
-        font-size: 18px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-</style>
 </head>
 <body>
 
 <h1>Rodzaje pętli w JavaScript</h1>
 
 
-<div class="blok">
-    <h2>Pętla for</h2>
+<h2>Pętla for</h2>
 
-    <h3>Konstrukcja:</h3>
-    <div class="kod">
+<h3>Konstrukcja:</h3>
+<pre>
 for (zainicjowanie_zmiennej; warunek_kończący_wykonywanie_pętli; zmiana_zmiennej) {
 
 }
-    </div>
+</pre>
 
-    <h3>Opis:</h3>
-    <p>Pętla <b>for</b> wykonuje kod określoną liczbę razy. Najpierw ustawia zmienną,
-    potem sprawdza warunek, a po każdej iteracji zmienia wartość zmiennej.</p>
+<h3>Opis:</h3>
+<p>Pętla <b>for</b> wykonuje kod określoną liczbę razy. Najpierw ustawia zmienną,
+potem sprawdza warunek, a po każdej iteracji zmienia wartość zmiennej.</p>
 
-    <h3>Schemat blokowy:</h3>
-    <div class="zdjecie" style="background-image: url('{3E79C0AA-7B57-4FC4-85EB-5C2A1B9A953B}.png');">
-   
-    </div>
-</div>
+<h3>Schemat blokowy:</h3>
+<img src="{3E79C0AA-7B57-4FC4-85EB-5C2A1B9A953B}.png" alt="Schemat pętli for" width="350">
 
-<div class="blok">
-    <h2>Pętla while – z kontrolowanym wejściem</h2>
 
-    <h3>Konstrukcja:</h3>
-    <div class="kod">
+
+<h2>Pętla while – z kontrolowanym wejściem</h2>
+
+<h3>Konstrukcja:</h3>
+<pre>
 while (wyrażenie_sprawdzające_zakończenie_pętli) {
 
 }
-    </div>
+</pre>
 
-    <h3>Opis:</h3>
-    <p>Pętla <b>while</b> najpierw sprawdza warunek, a dopiero potem wykonuje kod.
-    Może się nie wykonać ani razu.</p>
+<h3>Opis:</h3>
+<p>Pętla <b>while</b> najpierw sprawdza warunek, a dopiero potem wykonuje kod.
+Może się nie wykonać ani razu.</p>
 
-    <h3>Schemat blokowy:</h3>
-    <div class="zdjecie" style="background-image: url('{3DA1A08B-ABEC-4426-AFEC-71B04BFB33A0}.png');">
-  
-    </div>
-</div>
+<h3>Schemat blokowy:</h3>
+<img src="{3DA1A08B-ABEC-4426-AFEC-71B04BFB33A0}.png" alt="Schemat pętli while" width="350">
 
 
-<div class="blok">
-    <h2>Pętla do...while – z kontrolowanym wyjściem</h2>
 
-    <h3>Konstrukcja:</h3>
-    <div class="kod">
+<h2>Pętla do...while – z kontrolowanym wyjściem</h2>
+
+<h3>Konstrukcja:</h3>
+<pre>
 do {
 
 } while (warunek);
-    </div>
+</pre>
 
-    <h3>Opis:</h3>
-    <p>Pętla <b>do...while</b> zawsze wykona się przynajmniej raz, ponieważ warunek
-    sprawdzany jest dopiero po wykonaniu kodu.</p>
+<h3>Opis:</h3>
+<p>Pętla <b>do...while</b> zawsze wykona się przynajmniej raz, ponieważ warunek
+sprawdzany jest dopiero po wykonaniu kodu.</p>
 
-    <h3>Schemat blokowy:</h3>
-    <div class="zdjecie" style="background-image: url('{C5ECAAB6-DFD0-427B-B5AB-D93AA6DA98FB}.png');">
-
-    </div>
-</div>
+<h3>Schemat blokowy:</h3>
+<img src="{C5ECAAB6-DFD0-427B-B5AB-D93AA6DA98FB}.png" alt="Schemat pętli do while" width="350">
 
 </body>
 </html>
