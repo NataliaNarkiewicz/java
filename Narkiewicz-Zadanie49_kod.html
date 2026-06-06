@@ -1,15 +1,23 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 49 – Narkiewicz</title>
+</head>
+<body>
+
+<h3><b>KOD HTML</b></h3>
+
+<textarea id="textarea" name="textarea" rows="32" cols="90">
 <!DOCTYPE html>
 <html lang="pl">
 <head>
 <meta charset="utf-8">
-<title>Zadanie 49 –Natalia Narkiewicz</title>
+<title>Zadanie 49 – Natalia Narkiewicz</title>
 </head>
 <body>
 
-<h2>Kod programu:</h2>
-
-<pre style="font-size:18px; color:black;">
-&lt;script&gt;
+<div style="color:red; font-size:40px;">
+<script>
 
 do {
 
@@ -24,19 +32,23 @@ do {
 
 }
 while (
-    !(a_nar &gt; 0 && b_nar &gt; 0 && c_nar &gt; 0 &&
-      a_nar + b_nar &gt; c_nar &&
-      a_nar + c_nar &gt; b_nar &&
-      b_nar + c_nar &gt; a_nar)
+    !(a_nar > 0 && b_nar > 0 && c_nar > 0 &&
+      a_nar + b_nar > c_nar &&
+      a_nar + c_nar > b_nar &&
+      b_nar + c_nar > a_nar)
 );
 
-document.write("Podane boki tworzą trójkąt.&lt;br&gt;");
-document.write("a = " + a_nar + "&lt;br&gt;");
-document.write("b = " + b_nar + "&lt;br&gt;");
-document.write("c = " + c_nar + "&lt;br&gt;");
+document.write("Podane boki tworzą trójkąt.<br>");
+document.write("a = " + a_nar + "<br>");
+document.write("b = " + b_nar + "<br>");
+document.write("c = " + c_nar + "<br>");
 
-&lt;/script&gt;
-</pre>
+</script>
+</div>
+
+</body>
+</html>
+</textarea>
 
 </body>
 </html>
