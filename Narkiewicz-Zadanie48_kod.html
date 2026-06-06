@@ -1,3 +1,13 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 48 – Narkiewicz</title>
+</head>
+<body>
+
+<h3><b>KOD HTML</b></h3>
+
+<textarea id="textarea" name="textarea" rows="28" cols="90">
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -6,29 +16,31 @@
 </head>
 <body>
 
-<h2>Kod programu:</h2>
-
-<pre style="font-size:18px; color:black;">
-&lt;script&gt;
+<div style="color:red; font-size:50px;">
+<script>
 
 do {
     var liczba1_nar = prompt("wysokość =", "");
     var h_nar = parseFloat(liczba1_nar);
 }
-while (h_nar &lt;= 0);
+while (h_nar <= 0);
 
 do {
     var liczba1_nar = prompt("podstawę =", "");
     var a_nar = parseFloat(liczba1_nar);
 }
-while (!(a_nar &gt; 0));
+while (!(a_nar > 0));
 
 var Pole_nar = a_nar * h_nar / 2;
 
-document.write("Pole = " + Pole_nar.toFixed(2) + " cm²&lt;br&gt;");
+document.write("Pole = " + Pole_nar.toFixed(2) + " cm²<br>");
 
-&lt;/script&gt;
-</pre>
+</script>
+</div>
+
+</body>
+</html>
+</textarea>
 
 </body>
 </html>
