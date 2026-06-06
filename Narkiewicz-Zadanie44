@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 44 – Natalia Narkiewicz</title>
+</head>
+<body>
+
+<div style="color:red; font-size:40px;">
+<script>
+for (i_nar = 1; i_nar <= 10; i_nar++) {
+    document.write("wyświetlam " + i_nar + " raz – Narkiewicz<br>");
+}
+</script>
+</div>
+
+</body>
+</html>
