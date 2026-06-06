@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 47 – Natalia Narkiewicz</title>
+</head>
+<body>
+
+<h2>Kod programu:</h2>
+
+<pre style="font-size:18px; color:black;">
+&lt;script&gt;
+let ile_razy_nar = 12;       
+let wielkosc_liter_nar = 41;  
+
+let dana_nar = prompt("Podaj liczbę:");
+
+document.write("ilość wykonania pętli = " + ile_razy_nar + "&lt;br&gt;");
+document.write("wielkość liter = " + wielkosc_liter_nar + "px&lt;br&gt;&lt;br&gt;");
+
+if (dana_nar % 2 === 0) {
+    for (let i_nar = 1; i_nar &lt;= ile_razy_nar; i_nar++) {
+        document.write("&lt;span style='color:blue; font-size:" + wielkosc_liter_nar + "px;'&gt;Narkiewicz&lt;/span&gt;&lt;br&gt;");
+    }
+} else {
+    for (let i_nar = 1; i_nar &lt;= ile_razy_nar; i_nar++) {
+        document.write("&lt;span style='color:green; font-size:" + wielkosc_liter_nar + "px;'&gt;Natalia&lt;/span&gt;&lt;br&gt;");
+    }
+}
+&lt;/script&gt;
+</pre>
+
+</body>
+</html>
