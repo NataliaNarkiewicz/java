@@ -1,0 +1,42 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 61 – Narkiewicz</title>
+</head>
+<body>
+
+<h3><b>KOD HTML</b></h3>
+
+<textarea rows="40" cols="90">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 61 – Natalia Narkiewicz</title>
+</head>
+<body>
+
+<script>
+
+let R_nar = parseFloat(prompt("Podaj promień koła R:", ""));
+let licznik_nar = 0;
+
+for (let i_nar = Math.floor(-R_nar - 1); i_nar <= Math.floor(R_nar + 1); i_nar++) {
+    for (let j_nar = Math.floor(-R_nar - 1); j_nar <= Math.floor(R_nar + 1); j_nar++) {
+        if (i_nar * i_nar + j_nar * j_nar <= R_nar * R_nar) {
+            licznik_nar++;
+        }
+    }
+}
+
+document.write("Promień R = " + R_nar + "<br>");
+document.write("Liczba punktów kratowych N(R) = " + licznik_nar + "<br>");
+
+</script>
+
+</body>
+</html>
+</textarea>
+
+</body>
+</html>
