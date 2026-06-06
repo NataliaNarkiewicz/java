@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 51 – Natalia Narkewicz</title>
+</head>
+<body>
+
+<h2>Kod programu:</h2>
+
+<pre style="font-size:18px; color:black;">
+&lt;script&gt;
+
+let liczba_nar = prompt("Podaj liczbę n =", "");
+let n_nar = parseInt(liczba_nar);
+
+let silnia_nar = 1;
+
+if (n_nar === 0) {
+    silnia_nar = 1;
+}
+else if (n_nar > 0) {
+    for (let i_nar = 1; i_nar &lt;= n_nar; i_nar++) {
+        silnia_nar = silnia_nar * i_nar;
+    }
+}
+else {
+    document.write("Silnia nie jest zdefiniowana dla liczb ujemnych!");
+}
+
+if (n_nar >= 0) {
+    document.write("n = " + n_nar + "&lt;br&gt;");
+    document.write(n_nar + "! = " + silnia_nar + "&lt;br&gt;");
+}
+
+&lt;/script&gt;
+</pre>
+
+</body>
+</html>
