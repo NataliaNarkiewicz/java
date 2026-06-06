@@ -9,19 +9,20 @@
 <script>
 
 let ile_razy_nar = 12;      
-let wielkosc_liter_nar = 41; 
+let wielkosc_liter_nar = 41;
 
 document.write("ilość wykonania pętli = " + ile_razy_nar + "<br>");
 document.write("wielkość liter = " + wielkosc_liter_nar + "px<br><br>");
 
+
 for (let i_nar = 1; i_nar <= ile_razy_nar; i_nar++) {
 
     if (i_nar % 2 === 1) {
-   
-        document.write("<span style='font-size:" + wielkosc_liter_nar + "px; color:blue;'>Narkiewicz</span><br>");
+
+        document.write("<span style='font-size:" + wielkosc_liter_nar + "px;'>Narkiewicz</span><br>");
     } else {
-      
-        document.write("<span style='font-size:" + wielkosc_liter_nar + "px; color:green;'>Natalia</span><br>");
+
+        document.write("<span style='font-size:" + wielkosc_liter_nar + "px;'>Natalia</span><br>");
     }
 }
 </script>
