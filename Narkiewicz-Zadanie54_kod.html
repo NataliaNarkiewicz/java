@@ -1,0 +1,54 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 54 – Narkiewicz</title>
+</head>
+<body>
+
+<h3><b>KOD HTML</b></h3>
+
+<textarea id="textarea" name="textarea" rows="40" cols="90">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 54 – Natalia Narkiewicz</title>
+</head>
+<body>
+
+<script>
+
+// obliczenia a i b
+let a_nar = (10 % 4) + 5;   // nazwisko Narkiewicz = 10 liter
+let b_nar = (7 % 6) + 20;   // imię Natalia = 7 liter
+
+// górna linia
+for (let i_nar = 1; i_nar <= b_nar; i_nar++) {
+    document.write("*");
+}
+document.write("<br>");
+
+// środek prostokąta
+for (let w_nar = 1; w_nar <= a_nar - 2; w_nar++) {
+    document.write("*"); // lewa krawędź
+
+    for (let spacja_nar = 1; spacja_nar <= b_nar - 2; spacja_nar++) {
+        document.write("&nbsp;");
+    }
+
+    document.write("*<br>"); // prawa krawędź
+}
+
+// dolna linia
+for (let i_nar = 1; i_nar <= b_nar; i_nar++) {
+    document.write("*");
+}
+
+</script>
+
+</body>
+</html>
+</textarea>
+
+</body>
+</html>
