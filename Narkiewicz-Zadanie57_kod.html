@@ -1,0 +1,79 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 57 – Narkiewicz</title>
+</head>
+<body>
+
+<h3><b>KOD HTML</b></h3>
+
+<textarea rows="50" cols="90">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 57 – Natalia Narkiewicz</title>
+</head>
+<body>
+
+<script>
+
+
+let l1_nar, l2_nar;
+
+do {
+    l1_nar = parseInt(prompt("Podaj pierwszą liczbę z przedziału <20,60>:", ""));
+    if (!(l1_nar >= 20 && l1_nar <= 60)) {
+        document.write("Liczba l1 nie należy do przedziału <20,60><br>");
+    }
+} while (!(l1_nar >= 20 && l1_nar <= 60));
+
+do {
+    l2_nar = parseInt(prompt("Podaj drugą liczbę z przedziału <20,60>:", ""));
+    if (!(l2_nar >= 20 && l2_nar <= 60)) {
+        document.write("Liczba l2 nie należy do przedziału <20,60><br>");
+    }
+} while (!(l2_nar >= 20 && l2_nar <= 60));
+
+
+
+let pocz_nar = parseInt(prompt("Podaj początkową wielkość tekstu (px):", ""));
+
+
+let tekst_nar = prompt("Podaj dowolny tekst:", "");
+
+
+
+let i_nar = pocz_nar;
+
+
+if (l1_nar < l2_nar) {
+
+    while (i_nar <= 100) {
+        document.write("<p style=\"font-size:" + i_nar + "px; color:black;\">" + tekst_nar + "</p>");
+        i_nar += 5;
+    }
+
+}
+
+else if (l2_nar < l1_nar) {
+
+    while (i_nar >= 0) {
+        document.write("<p style=\"font-size:" + i_nar + "px; color:black;\">" + tekst_nar + "</p>");
+        i_nar -= 5;
+    }
+
+}
+
+else {
+    document.write("<p style=\"font-size:" + i_nar + "px; color:black;\">" + tekst_nar + "</p>");
+}
+
+</script>
+
+</body>
+</html>
+</textarea>
+
+</body>
+</html>
