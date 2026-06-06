@@ -1,0 +1,56 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 55 – Narkiewicz</title>
+</head>
+<body>
+
+<h3><b>KOD HTML</b></h3>
+
+<textarea rows="40" cols="90">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 55 – Natalia Narkiewicz</title>
+</head>
+<body>
+
+<script>
+
+let a_nar = parseInt(prompt("Podaj wysokość a =", ""));
+let b_nar = parseInt(prompt("Podaj szerokość b =", ""));
+
+
+for (let i_nar = 1; i_nar <= b_nar; i_nar++) {
+    document.write("*");
+}
+document.write("<br>");
+
+
+let wiersz_nar = "*";
+
+for (let i_nar = 1; i_nar <= (b_nar - 2); i_nar++) {
+    wiersz_nar = wiersz_nar + "&nbsp;&nbsp;";
+}
+
+wiersz_nar = wiersz_nar + "*";
+
+
+for (let i_nar = 1; i_nar <= (a_nar - 2); i_nar++) {
+    document.write(wiersz_nar + "<br>");
+}
+
+
+for (let i_nar = 1; i_nar <= b_nar; i_nar++) {
+    document.write("*");
+}
+
+</script>
+
+</body>
+</html>
+</textarea>
+
+</body>
+</html>
